@@ -11,41 +11,110 @@
   <link rel="stylesheet" href="./css/style.css" />
 </head>
 <body>
-  <header>
-    <h1>De Bosch Villas</h1>
+
+  <header class="site-header">
+    <div class="logo">De Bosch Villas</div>
     <nav>
       <a href="#about">About</a>
       <a href="#units">Units</a>
       <a href="#availability">Availability</a>
       <a href="#contact">Contact</a>
     </nav>
+    <a href="#availability" class="button button-small">Book now</a>
   </header>
 
   <main>
-    <section id="hero">
-      <h2>Luxury villa stays with quiet elegance</h2>
-      <p>A refined stay experience designed around privacy, comfort, and place.</p>
-      <a href="#availability" class="button">Check availability</a>
+
+    <section id="hero" class="hero">
+      <div class="hero-image"></div>
+      <div class="hero-content">
+        <p class="eyebrow">Private villas &middot; Est. retreat</p>
+        <h1>Quiet luxury,<br>designed around you.</h1>
+        <p class="hero-sub">Four private villas set apart from the ordinary — space, stillness, and considered design at every turn.</p>
+        <a href="#availability" class="button">Check availability</a>
+      </div>
     </section>
 
-    <section id="about">
-      <h2>About</h2>
-      <p>De Bosch Villas is a luxury guesthouse with four beautifully designed units, each crafted for comfort, privacy, and calm.</p>
+    <section id="about" class="about">
+      <div class="about-text">
+        <p class="eyebrow">About</p>
+        <h2>A retreat built on restraint</h2>
+        <p>De Bosch Villas was created for those who value privacy, calm, and thoughtful design over spectacle. Each of the four villas is an individual sanctuary — quietly luxurious, deeply comfortable, and entirely your own for the duration of your stay.</p>
+      </div>
+      <div class="about-image"></div>
     </section>
 
-    <section id="units">
-      <h2>Our Units</h2>
-      <p>Four distinctive stays, each with its own atmosphere and amenities.</p>
+    <section id="units" class="units">
+      <p class="eyebrow">Accommodation</p>
+      <h2>Our Villas</h2>
+      <p class="section-intro">Four distinctive stays, each with its own atmosphere, layout, and outlook.</p>
+
+      <div class="unit-grid">
+        <article class="unit-card">
+          <div class="unit-image"></div>
+          <div class="unit-body">
+            <h3>Villa One</h3>
+            <p class="unit-meta">Sleeps 2 &middot; 1 bedroom &middot; Private terrace</p>
+            <a href="#availability" class="unit-link">View availability &rarr;</a>
+          </div>
+        </article>
+
+        <article class="unit-card">
+          <div class="unit-image"></div>
+          <div class="unit-body">
+            <h3>Villa Two</h3>
+            <p class="unit-meta">Sleeps 4 &middot; 2 bedrooms &middot; Garden view</p>
+            <a href="#availability" class="unit-link">View availability &rarr;</a>
+          </div>
+        </article>
+
+        <article class="unit-card">
+          <div class="unit-image"></div>
+          <div class="unit-body">
+            <h3>Villa Three</h3>
+            <p class="unit-meta">Sleeps 2 &middot; 1 bedroom &middot; Plunge pool</p>
+            <a href="#availability" class="unit-link">View availability &rarr;</a>
+          </div>
+        </article>
+
+        <article class="unit-card">
+          <div class="unit-image"></div>
+          <div class="unit-body">
+            <h3>Villa Four</h3>
+            <p class="unit-meta">Sleeps 6 &middot; 3 bedrooms &middot; Full kitchen</p>
+            <a href="#availability" class="unit-link">View availability &rarr;</a>
+          </div>
+        </article>
+      </div>
     </section>
 
-    <section id="availability">
-      <h2>Availability</h2>
-      <p>Booking engine and calendars will be embedded here.</p>
+    <section id="availability" class="availability">
+      <p class="eyebrow">Booking</p>
+      <h2>Check availability</h2>
+      <p class="section-intro">Select a villa and dates to view live availability and book directly — no third-party fees, no middlemen.</p>
+
+      <div class="availability-placeholder">
+        <p>Booking engine will be embedded here.</p>
+      </div>
     </section>
+
   </main>
 
-  <footer id="contact">
-    <p>De Bosch Villas</p>
+  <footer id="contact" class="site-footer">
+    <div class="footer-top">
+      <div>
+        <p class="footer-logo">De Bosch Villas</p>
+        <p class="footer-tagline">Private villas. Quiet luxury.</p>
+      </div>
+      <div class="footer-links">
+        <a href="#about">About</a>
+        <a href="#units">Units</a>
+        <a href="#availability">Availability</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 De Bosch Villas. All rights reserved.</p>
+    </div>
   </footer>
 
   <script src="./js/main.js"></script>

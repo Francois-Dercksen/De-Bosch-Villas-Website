@@ -1,7 +1,5 @@
-console.log("De Bosch Villas site loaded");
-
 document.addEventListener("DOMContentLoaded", () => {
-  const navLinks = document.querySelectorAll('nav a[href^="#"]');
+  const navLinks = document.querySelectorAll('a[href^="#"]');
 
   navLinks.forEach(link => {
     link.addEventListener("click", (e) => {
@@ -13,5 +11,18 @@ document.addEventListener("DOMContentLoaded", () => {
         target.scrollIntoView({ behavior: "smooth", block: "start" });
       }
     });
+  });
+
+  const header = document.querySelector(".site-header");
+  let lastScroll = 0;
+
+  window.addEventListener("scroll", () => {
+    const currentScroll = window.scrollY;
+    if (currentScroll > 40) {
+      header.style.boxShadow = "0 4px 16px rgba(28,28,27,0.06)";
+    } else {
+      header.style.boxShadow = "none";
+    }
+    lastScroll = currentScroll;
   });
 });
