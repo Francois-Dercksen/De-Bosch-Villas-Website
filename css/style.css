@@ -1,25 +1,94 @@
-body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-  color: #222;
-  background: #f7f4ee;
+/* Art direction: De Bosch Villas → cool, minimal, architectural
+   Palette: neutral stone/charcoal, accent: deep slate
+   Typography: Cabinet Grotesk (display) + General Sans (body)
+   Density: spacious, gallery-like */
+
+:root {
+  --color-bg: #f5f4f2;
+  --color-surface: #fbfbfa;
+  --color-surface-offset: #eceae7;
+  --color-text: #1c1c1b;
+  --color-text-muted: #6f6d69;
+  --color-border: #dcdad6;
+  --color-accent: #2f3a3d;
+  --color-accent-hover: #1f2729;
+
+  --font-display: 'Cabinet Grotesk', 'Georgia', serif;
+  --font-body: 'General Sans', 'Helvetica Neue', sans-serif;
+
+  --space-4: 1rem;
+  --space-8: 2rem;
+  --space-16: 4rem;
+  --space-24: 6rem;
 }
 
-header, main, footer {
-  padding: 24px;
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: var(--font-body);
+  background: var(--color-bg);
+  color: var(--color-text);
+  line-height: 1.6;
+}
+
+h1, h2, h3 {
+  font-family: var(--font-display);
+  font-weight: 500;
+  letter-spacing: -0.01em;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--space-8) var(--space-16);
+  border-bottom: 1px solid var(--color-border);
 }
 
 nav a {
-  margin-right: 16px;
-  color: inherit;
+  color: var(--color-text);
   text-decoration: none;
+  margin-left: var(--space-8);
+  font-size: 0.95rem;
 }
 
 #hero {
-  padding: 80px 24px;
+  padding: var(--space-24) var(--space-16);
+  text-align: left;
+  max-width: 700px;
 }
 
-a {
+#hero h2 {
+  font-size: clamp(2rem, 4vw, 3.5rem);
+  margin-bottom: var(--space-4);
+}
+
+#hero p {
+  color: var(--color-text-muted);
+  margin-bottom: var(--space-8);
+}
+
+a.button {
   display: inline-block;
-  margin-top: 12px;
+  background: var(--color-accent);
+  color: #fff;
+  padding: var(--space-4) var(--space-8);
+  text-decoration: none;
+  border-radius: 4px;
+}
+
+a.button:hover {
+  background: var(--color-accent-hover);
+}
+
+section {
+  padding: var(--space-24) var(--space-16);
+  border-top: 1px solid var(--color-border);
+}
+
+footer {
+  padding: var(--space-16);
+  text-align: center;
+  color: var(--color-text-muted);
+  border-top: 1px solid var(--color-border);
 }
