@@ -14,15 +14,12 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   const header = document.querySelector(".site-header");
-  let lastScroll = 0;
 
   window.addEventListener("scroll", () => {
-    const currentScroll = window.scrollY;
-    if (currentScroll > 40) {
+    if (window.scrollY > 40) {
       header.style.boxShadow = "0 4px 16px rgba(28,28,27,0.06)";
     } else {
       header.style.boxShadow = "none";
     }
-    lastScroll = currentScroll;
   });
 });
