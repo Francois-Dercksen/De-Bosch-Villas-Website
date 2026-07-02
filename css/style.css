@@ -1,5 +1,5 @@
 /* Art direction: De Bosch Villas → cool, minimal, architectural
-   Palette: neutral stone/charcoal, accent: deep slate
+   Palette: neutral stone/charcoal accent, navy background atmosphere
    Typography: Cabinet Grotesk (display) + General Sans (body)
    Density: spacious, gallery-like */
 
@@ -11,8 +11,12 @@
   --color-text: #1c1c1b;
   --color-text-muted: #6f6d69;
   --color-border: #dcdad6;
+
   --color-accent: #2f3a3d;
   --color-accent-hover: #1f2729;
+
+  --color-navy: #14213d;
+  --color-navy-soft: color-mix(in oklab, #14213d 6%, #fbfbfa);
 
   --font-display: 'Cabinet Grotesk', 'Georgia', serif;
   --font-body: 'General Sans', 'Helvetica Neue', sans-serif;
@@ -171,7 +175,7 @@ a {
 .hero-overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(180deg, rgba(28,28,27,0.2), rgba(28,28,27,0.55));
+  background: linear-gradient(180deg, rgba(20,33,61,0.3), rgba(20,33,61,0.65));
   z-index: 0;
 }
 
@@ -274,7 +278,7 @@ a {
 .availability {
   padding: var(--space-24) var(--space-16);
   border-top: 1px solid var(--color-border);
-  background: var(--color-surface);
+  background: var(--color-navy-soft);
 }
 
 .availability-form {
@@ -387,6 +391,7 @@ a {
   padding: var(--space-24) var(--space-16);
   border-top: 1px solid var(--color-border);
   text-align: center;
+  background: var(--color-navy-soft);
 }
 
 .footer-content {
