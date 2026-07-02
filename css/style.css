@@ -136,9 +136,10 @@ a {
 
 .logo {
   font-family: var(--font-display);
-  font-size: 1.6rem;
+  font-size: 2rem;
   font-weight: 700;
-  letter-spacing: 0.02em;
+  letter-spacing: 0.03em;
+  font-variant-ligatures: common-ligatures;
 }
 
 .site-header nav {
@@ -376,6 +377,11 @@ a {
   background: var(--color-accent);
   color: #fff;
   border-color: var(--color-accent);
+}
+
+.footer-email {
+  margin-bottom: var(--space-4);
+  font-size: 0.95rem;
 }
 
 .footer-copyright {
