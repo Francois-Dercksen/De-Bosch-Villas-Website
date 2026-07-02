@@ -47,74 +47,81 @@
 
     <section id="units" class="units">
       <p class="eyebrow">Accommodation</p>
-      <h2>Our Villas</h2>
-      <p class="section-intro">Four distinctive stays, each with its own atmosphere, layout, and outlook.</p>
+      <h2>The Villas</h2>
+      <p class="section-intro">Four identical private villas, each offering the same considered comfort and privacy. Your unit is assigned automatically upon booking.</p>
 
-      <div class="unit-grid">
-        <article class="unit-card">
-          <img class="unit-image" src="./assets/images/villa-1.jpg" alt="Villa One exterior" loading="lazy" decoding="async" width="700" height="525">
-          <div class="unit-body">
-            <h3>Villa One</h3>
-            <p class="unit-meta">Sleeps 2 &middot; 1 bedroom &middot; Private terrace</p>
-            <a href="#availability" class="button button-small">View availability</a>
-          </div>
-        </article>
-
-        <article class="unit-card">
-          <img class="unit-image" src="./assets/images/villa-2.jpg" alt="Villa Two exterior" loading="lazy" decoding="async" width="700" height="525">
-          <div class="unit-body">
-            <h3>Villa Two</h3>
-            <p class="unit-meta">Sleeps 4 &middot; 2 bedrooms &middot; Garden view</p>
-            <a href="#availability" class="button button-small">View availability</a>
-          </div>
-        </article>
-
-        <article class="unit-card">
-          <img class="unit-image" src="./assets/images/villa-3.jpg" alt="Villa Three exterior" loading="lazy" decoding="async" width="700" height="525">
-          <div class="unit-body">
-            <h3>Villa Three</h3>
-            <p class="unit-meta">Sleeps 2 &middot; 1 bedroom &middot; Plunge pool</p>
-            <a href="#availability" class="button button-small">View availability</a>
-          </div>
-        </article>
-
-        <article class="unit-card">
-          <img class="unit-image" src="./assets/images/villa-4.jpg" alt="Villa Four exterior" loading="lazy" decoding="async" width="700" height="525">
-          <div class="unit-body">
-            <h3>Villa Four</h3>
-            <p class="unit-meta">Sleeps 6 &middot; 3 bedrooms &middot; Full kitchen</p>
-            <a href="#availability" class="button button-small">View availability</a>
-          </div>
-        </article>
+      <div class="unit-showcase">
+        <img class="unit-showcase-image" src="./assets/images/villa-1.jpg" alt="Interior of a De Bosch Villas unit" loading="lazy" decoding="async" width="900" height="700">
+        <div class="unit-showcase-details">
+          <h3>Every villa, the same standard</h3>
+          <ul class="unit-features">
+            <li>Sleeps 2–4 guests</li>
+            <li>Private terrace</li>
+            <li>Air conditioning &amp; fireplace</li>
+            <li>Fully equipped kitchenette</li>
+            <li>King or twin bed configuration</li>
+            <li>En-suite bathroom</li>
+          </ul>
+          <a href="#availability" class="button">Check availability</a>
+        </div>
       </div>
     </section>
 
     <section id="availability" class="availability">
       <p class="eyebrow">Booking</p>
       <h2>Check availability</h2>
-      <p class="section-intro">Select a villa and dates to view live availability and book directly — no third-party fees, no middlemen.</p>
+      <p class="section-intro">Select your dates and number of units to check availability. Direct bookings only — no third-party fees.</p>
 
-      <div class="availability-placeholder">
-        <p>Booking engine will be embedded here.</p>
-      </div>
+      <form class="availability-form">
+        <div class="form-field">
+          <label for="checkin">Check-in</label>
+          <input type="date" id="checkin" name="checkin" required>
+        </div>
+
+        <div class="form-field">
+          <label for="checkout">Check-out</label>
+          <input type="date" id="checkout" name="checkout" required>
+        </div>
+
+        <div class="form-field">
+          <label for="units-count">Units</label>
+          <select id="units-count" name="units-count">
+            <option value="1">1 unit</option>
+            <option value="2">2 units</option>
+            <option value="3">3 units</option>
+            <option value="4">4 units</option>
+          </select>
+        </div>
+
+        <button type="submit" class="button">Check availability</button>
+      </form>
+
+      <p class="form-note">A minimum stay of 2 nights applies to all bookings.</p>
     </section>
 
   </main>
 
   <footer id="contact" class="site-footer">
-    <div class="footer-top">
-      <div>
-        <p class="footer-logo">De Bosch Villas</p>
-        <p class="footer-tagline">Private villas. Quiet luxury.</p>
+    <div class="footer-content">
+      <p class="footer-logo">De Bosch Villas</p>
+      <p class="footer-tagline">Private villas. Quiet luxury.</p>
+
+      <div class="footer-social">
+        <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" class="icon-button" aria-label="De Bosch Villas on Facebook">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8">
+            <path d="M15 8h2V4h-2a5 5 0 0 0-5 5v2H8v4h2v7h4v-7h3l1-4h-4V9a1 1 0 0 1 1-1Z"/>
+          </svg>
+        </a>
+        <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="icon-button" aria-label="De Bosch Villas on Instagram">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8">
+            <rect x="3" y="3" width="18" height="18" rx="5"/>
+            <circle cx="12" cy="12" r="4"/>
+            <circle cx="17.2" cy="6.8" r="1"/>
+          </svg>
+        </a>
       </div>
-      <div class="footer-links">
-        <a href="#about" class="text-link">About</a>
-        <a href="#units" class="text-link">Units</a>
-        <a href="#availability" class="text-link">Availability</a>
-      </div>
-    </div>
-    <div class="footer-bottom">
-      <p>&copy; 2026 De Bosch Villas. All rights reserved.</p>
+
+      <p class="footer-copyright">&copy; 2026 De Bosch Villas. All rights reserved.</p>
     </div>
   </footer>
 
