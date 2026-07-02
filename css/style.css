@@ -1,5 +1,5 @@
 /* Art direction: De Bosch Villas → cool, minimal, architectural
-   Palette: neutral stone/charcoal, accent: deep slate
+   Palette: warm stone surfaces, luxurious navy accent
    Typography: Cabinet Grotesk (display) + General Sans (body)
    Density: spacious, gallery-like */
 
@@ -11,8 +11,11 @@
   --color-text: #1c1c1b;
   --color-text-muted: #6f6d69;
   --color-border: #dcdad6;
-  --color-accent: #2f3a3d;
-  --color-accent-hover: #1f2729;
+
+  --color-accent: #14213d;
+  --color-accent-hover: #0c162c;
+  --color-accent-highlight: #dbe0ea;
+  --color-accent-soft: color-mix(in oklab, #14213d 8%, #fbfbfa);
 
   --font-display: 'Cabinet Grotesk', 'Georgia', serif;
   --font-body: 'General Sans', 'Helvetica Neue', sans-serif;
@@ -142,6 +145,7 @@ a {
   font-weight: 700;
   letter-spacing: 0.03em;
   font-variant-ligatures: common-ligatures;
+  color: var(--color-accent);
 }
 
 .site-header nav {
@@ -171,7 +175,7 @@ a {
 .hero-overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(180deg, rgba(28,28,27,0.2), rgba(28,28,27,0.55));
+  background: linear-gradient(180deg, rgba(20,33,61,0.25), rgba(20,33,61,0.6));
   z-index: 0;
 }
 
@@ -339,7 +343,7 @@ a {
   gap: var(--space-3);
   margin-top: var(--space-6);
   padding: var(--space-4) var(--space-5);
-  background: color-mix(in oklab, var(--color-accent) 8%, var(--color-surface));
+  background: var(--color-accent-soft);
   border: 1px solid var(--color-accent);
   border-radius: 6px;
   color: var(--color-text);
