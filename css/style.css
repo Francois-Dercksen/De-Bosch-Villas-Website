@@ -533,13 +533,121 @@ a {
   font-size: 0.8rem;
 }
 
+/* RESPONSIVE - MOBILE */
 @media (max-width: 768px) {
-  .site-header { padding: var(--space-4) var(--space-6); flex-wrap: wrap; gap: var(--space-4); }
-  .site-header nav { order: 3; width: 100%; justify-content: space-between; flex-wrap: wrap; gap: var(--space-3); }
-  .about { grid-template-columns: 1fr; padding: var(--space-16) var(--space-6); }
-  .units, .availability, .location { padding: var(--space-16) var(--space-6); }
-  .unit-showcase { grid-template-columns: 1fr; }
-  .hero-content { margin: 0 var(--space-6); }
-  .availability-form { flex-direction: column; align-items: stretch; }
-  .image-gallery { grid-template-columns: repeat(2, 1fr); }
+  .site-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--space-3);
+    padding: var(--space-4) var(--space-5);
+  }
+
+  .logo {
+    font-size: 1.5rem;
+  }
+
+  .site-header nav {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-4);
+    justify-content: flex-start;
+  }
+
+  .text-link {
+    font-size: 0.85rem;
+  }
+
+  .site-header > .button {
+    width: 100%;
+    text-align: center;
+    padding: var(--space-3) var(--space-6);
+  }
+
+  .hero {
+    min-height: 80vh;
+  }
+
+  .hero-content {
+    margin: 0 var(--space-5);
+    padding: var(--space-5);
+  }
+
+  .hero-content h1 {
+    font-size: clamp(1.8rem, 8vw, 2.4rem);
+  }
+
+  .hero-sub {
+    font-size: 0.95rem;
+  }
+
+  .hero-content .button {
+    width: 100%;
+    text-align: center;
+    padding: var(--space-4);
+  }
+
+  .about {
+    grid-template-columns: 1fr;
+    padding: var(--space-16) var(--space-5);
+    gap: var(--space-8);
+  }
+
+  .units, .availability, .location {
+    padding: var(--space-16) var(--space-5);
+  }
+
+  .unit-showcase {
+    grid-template-columns: 1fr;
+    gap: var(--space-6);
+  }
+
+  .unit-showcase-details .button {
+    width: 100%;
+    text-align: center;
+  }
+
+  .availability-form {
+    flex-direction: column;
+    align-items: stretch;
+    padding: var(--space-6);
+  }
+
+  .form-field {
+    min-width: 100%;
+  }
+
+  .availability-form .button {
+    width: 100%;
+    padding: var(--space-4);
+  }
+
+  .gallery-toggle-bar {
+    padding: var(--space-4) var(--space-3);
+    font-size: 0.8rem;
+    text-align: center;
+  }
+
+  .image-gallery {
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-3);
+  }
+
+  .image-gallery img {
+    height: 160px;
+  }
+
+  .location-directions {
+    width: 100%;
+    text-align: center;
+  }
+
+  .footer-social {
+    gap: var(--space-3);
+  }
+
+  .icon-button {
+    width: 44px;
+    height: 44px;
+  }
 }
