@@ -37,6 +37,10 @@
 
 html { scroll-behavior: smooth; }
 
+section[id] {
+  scroll-margin-top: 90px;
+}
+
 body {
   font-family: var(--font-body);
   background: var(--color-bg);
@@ -138,11 +142,7 @@ a {
 }
 
 .header-top {
-  display: none;
-}
-
-.mobile-book-inline {
-  display: none;
+  display: contents;
 }
 
 .logo {
@@ -158,32 +158,24 @@ a {
   gap: var(--space-6);
 }
 
-.nav-toggle {
-  display: none;
-  flex-direction: column;
-  justify-content: center;
-  gap: 5px;
-  width: 32px;
-  height: 32px;
-  background: none;
-  border: none;
-  cursor: pointer;
-  padding: 0;
+.mobile-book-inline {
+  display: none !important;
 }
 
-.nav-toggle span {
-  display: block;
-  width: 100%;
-  height: 2px;
-  background: var(--color-text);
+.nav-toggle {
+  display: none !important;
 }
 
 .nav-close {
-  display: none;
+  display: none !important;
 }
 
 .nav-overlay {
-  display: none;
+  display: none !important;
+}
+
+.desktop-book {
+  display: inline-block;
 }
 
 /* HERO */
@@ -588,7 +580,7 @@ a {
   }
 
   .header-top {
-    display: flex;
+    display: flex !important;
     justify-content: space-between;
     align-items: center;
     width: 100%;
@@ -599,15 +591,31 @@ a {
   }
 
   .desktop-book {
-    display: none;
+    display: none !important;
   }
 
   .nav-toggle {
-    display: flex;
+    display: flex !important;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+    width: 32px;
+    height: 32px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+  }
+
+  .nav-toggle span {
+    display: block;
+    width: 100%;
+    height: 2px;
+    background: var(--color-text);
   }
 
   .mobile-book-inline {
-    display: block;
+    display: block !important;
     width: 100%;
     text-align: center;
   }
@@ -635,7 +643,7 @@ a {
   }
 
   #mainNav .nav-close {
-    display: block;
+    display: block !important;
     align-self: flex-end;
     background: none;
     border: none;
@@ -655,14 +663,14 @@ a {
   }
 
   #mainNav .mobile-book {
-    display: block;
+    display: block !important;
     width: 100%;
     text-align: center;
     margin-top: var(--space-4);
   }
 
   .nav-overlay {
-    display: block;
+    display: block !important;
     position: fixed;
     inset: 0;
     background: rgba(0,0,0,0.4);
@@ -675,6 +683,10 @@ a {
   .nav-overlay.open {
     opacity: 1;
     pointer-events: auto;
+  }
+
+  section[id] {
+    scroll-margin-top: 130px;
   }
 
   .hero {
