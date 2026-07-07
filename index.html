@@ -16,7 +16,7 @@
     <div class="logo">De Bosch Villas</div>
     <nav>
       <a href="#about" class="text-link">About</a>
-      <a href="#units" class="text-link">Units</a>
+      <a href="#accomodation" class="text-link">Accomodation</a>
       <a href="#availability" class="text-link">Availability</a>
       <a href="#contact" class="text-link">Contact</a>
     </nav>
@@ -39,17 +39,17 @@
     <section id="about" class="about">
       <div class="about-text">
         <p class="eyebrow">About</p>
-        <h2>A retreat built on restraint</h2>
-        <p>De Bosch Villas was created for those who value privacy, calm, and thoughtful design over spectacle. Each of the four villas is an individual sanctuary — quietly luxurious, deeply comfortable, and entirely your own for the duration of your stay.</p>
-        <p>Surrounded by the beauty of Stellenbosch nature: vineyards, horses and breathtaking mountain views.</p>
+        <h2>Thoughtful design, natural beauty</h2>
+        <p>De Bosch Villas offer an exclusive escape for guests seeking nature within effortless comfort. Every detail of the four individual villas has been shaped around a sense of calm, creating an uninterrupted space to rest and recharge.</p>
+        <p>Step outside to sweeping views of the Stellenbosch mountains, vibrant vineyards, and grazing horses – all part of the Winelands' rhythm.</p>
       </div>
       <img class="about-image" src="./assets/images/about.jpg" alt="Terrace view" loading="lazy" decoding="async" width="900" height="700">
     </section>
 
-    <section id="units" class="units">
-      <p class="eyebrow">Accommodation</p>
+    <section id="accomodation" class="units">
+      <p class="eyebrow">Accomodation</p>
       <h2>The Villas</h2>
-      <p class="section-intro">Four identical private villas, each offering luxury, comfort and privacy.</p>
+      <p class="section-intro">Four private villas, each offering luxury and comfort.</p>
 
       <div class="unit-showcase">
         <img class="unit-showcase-image" src="./assets/images/villa-1.jpg" alt="Interior of a De Bosch Villas unit" loading="lazy" decoding="async" width="900" height="700">
@@ -66,12 +66,28 @@
           <a href="#availability" class="button">Check availability</a>
         </div>
       </div>
+
+      <div class="gallery-toggle-bar" id="galleryToggleBar" role="button" tabindex="0" aria-expanded="false" aria-controls="imageGallery">
+        <span>View Image Gallery</span>
+        <svg class="gallery-arrow" id="galleryArrow" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.8">
+          <path d="M6 9l6 6 6-6"/>
+        </svg>
+      </div>
+
+      <div class="image-gallery" id="imageGallery">
+        <img src="./assets/images/gallery-1.jpg" alt="De Bosch Villas gallery image 1" loading="lazy" decoding="async">
+        <img src="./assets/images/gallery-2.jpg" alt="De Bosch Villas gallery image 2" loading="lazy" decoding="async">
+        <img src="./assets/images/gallery-3.jpg" alt="De Bosch Villas gallery image 3" loading="lazy" decoding="async">
+        <img src="./assets/images/gallery-4.jpg" alt="De Bosch Villas gallery image 4" loading="lazy" decoding="async">
+        <img src="./assets/images/gallery-5.jpg" alt="De Bosch Villas gallery image 5" loading="lazy" decoding="async">
+        <img src="./assets/images/gallery-6.jpg" alt="De Bosch Villas gallery image 6" loading="lazy" decoding="async">
+      </div>
     </section>
 
     <section id="availability" class="availability">
       <p class="eyebrow">Booking</p>
       <h2>Check availability</h2>
-      <p class="section-intro">Select your dates and number of units to check availability.</p>
+      <p class="section-intro">Select your dates and number of units to check for availability.</p>
 
       <form class="availability-form">
         <div class="form-field">
@@ -107,6 +123,25 @@
       </div>
 
       <p class="form-note">A minimum stay of 2 nights applies to all bookings.</p>
+    </section>
+
+    <section id="location" class="location">
+      <p class="eyebrow">Location</p>
+      <h2>In the heart of the Winelands</h2>
+      <p class="section-intro">Set among the mountains and vineyards of Stellenbosch, minutes from the region's finest wine farms and restaurants.</p>
+
+      <div class="location-map">
+        <iframe
+          src="https://www.google.com/maps?q=Stellenbosch,South+Africa&output=embed"
+          width="100%"
+          height="420"
+          style="border:0;"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          title="De Bosch Villas location map">
+        </iframe>
+      </div>
     </section>
 
   </main>
