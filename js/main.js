@@ -106,4 +106,39 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     });
   }
+
+  const navToggle = document.getElementById("navToggle");
+  const navClose = document.getElementById("navClose");
+  const mainNav = document.getElementById("mainNav");
+  const navOverlay = document.getElementById("navOverlay");
+
+  function openNav() {
+    mainNav.classList.add("open");
+    navOverlay.classList.add("open");
+    navToggle.setAttribute("aria-expanded", "true");
+  }
+
+  function closeNav() {
+    mainNav.classList.remove("open");
+    navOverlay.classList.remove("open");
+    navToggle.setAttribute("aria-expanded", "false");
+  }
+
+  if (navToggle) {
+    navToggle.addEventListener("click", openNav);
+  }
+
+  if (navClose) {
+    navClose.addEventListener("click", closeNav);
+  }
+
+  if (navOverlay) {
+    navOverlay.addEventListener("click", closeNav);
+  }
+
+  if (mainNav) {
+    mainNav.querySelectorAll("a").forEach(link => {
+      link.addEventListener("click", closeNav);
+    });
+  }
 });
