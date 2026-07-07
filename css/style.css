@@ -162,6 +162,10 @@ a {
   display: none !important;
 }
 
+.mobile-book {
+  display: none !important;
+}
+
 .nav-toggle {
   display: none !important;
 }
