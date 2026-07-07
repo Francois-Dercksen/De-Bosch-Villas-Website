@@ -86,4 +86,24 @@ document.addEventListener("DOMContentLoaded", () => {
     checkinInput.addEventListener("change", hideFormError);
     checkoutInput.addEventListener("change", hideFormError);
   }
+
+  const galleryToggleBar = document.getElementById("galleryToggleBar");
+  const imageGallery = document.getElementById("imageGallery");
+  const galleryArrow = document.getElementById("galleryArrow");
+
+  function toggleGallery() {
+    const isOpen = imageGallery.classList.toggle("open");
+    galleryArrow.classList.toggle("open", isOpen);
+    galleryToggleBar.setAttribute("aria-expanded", isOpen);
+  }
+
+  if (galleryToggleBar) {
+    galleryToggleBar.addEventListener("click", toggleGallery);
+    galleryToggleBar.addEventListener("keydown", (e) => {
+      if (e.key === "Enter" || e.key === " ") {
+        e.preventDefault();
+        toggleGallery();
+      }
+    });
+  }
 });
