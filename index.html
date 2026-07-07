@@ -13,15 +13,30 @@
 <body>
 
   <header class="site-header">
-    <div class="logo">De Bosch Villas</div>
-    <nav>
+    <div class="header-top">
+      <div class="logo">De Bosch Villas</div>
+      <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+
+    <a href="#availability" class="button button-small mobile-book-inline">Book now</a>
+
+    <nav id="mainNav">
+      <button class="nav-close" id="navClose" aria-label="Close menu">&times;</button>
       <a href="#about" class="text-link">About</a>
       <a href="#accomodation" class="text-link">Accomodation</a>
       <a href="#availability" class="text-link">Availability</a>
       <a href="#location" class="text-link">Location</a>
       <a href="#contact" class="text-link">Contact</a>
+      <a href="#availability" class="button mobile-book">Book now</a>
     </nav>
-    <a href="#availability" class="button button-small">Book now</a>
+
+    <a href="#availability" class="button button-small desktop-book">Book now</a>
+
+    <div class="nav-overlay" id="navOverlay"></div>
   </header>
 
   <main>
@@ -31,7 +46,7 @@
       <div class="hero-overlay"></div>
       <div class="hero-content">
         <p class="eyebrow">Private villas &middot; Stellenbosch</p>
-        <h1>Quiet luxury</h1>
+        <h1>Quiet luxury.</h1>
         <p class="hero-sub">Four private villas set apart from the ordinary — space, stillness, and considered design at every turn.</p>
         <a href="#availability" class="button">Check availability</a>
       </div>
@@ -126,28 +141,28 @@
       <p class="form-note">A minimum stay of 2 nights applies to all bookings.</p>
     </section>
 
-  <section id="location" class="location">
-    <p class="eyebrow">Location</p>
-    <h2>In the heart of the Winelands</h2>
-    <p class="section-intro">Set among the mountains and vineyards of Stellenbosch, minutes from the region's finest wine farms and restaurants.</p>
-  
-    <div class="location-map">
-      <iframe
-        src="https://www.google.com/maps?q=-33.991590,18.833098&z=16&output=embed"
-        width="100%"
-        height="420"
-        style="border:0;"
-        allowfullscreen=""
-        loading="lazy"
-        referrerpolicy="no-referrer-when-downgrade"
-        title="De Bosch Villas location map">
-      </iframe>
-    </div>
-  
-    <a href="https://www.google.com/maps/dir/?api=1&destination=-33.991590,18.833098" target="_blank" rel="noopener noreferrer" class="button location-directions">
-      Get directions
-    </a>
-  </section>
+    <section id="location" class="location">
+      <p class="eyebrow">Location</p>
+      <h2>In the heart of the Winelands</h2>
+      <p class="section-intro">Set among the mountains and vineyards of Stellenbosch, minutes from the region's finest wine farms and restaurants.</p>
+
+      <div class="location-map">
+        <iframe
+          src="https://www.google.com/maps?q=-33.991590,18.833098&z=16&output=embed"
+          width="100%"
+          height="420"
+          style="border:0;"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          title="De Bosch Villas location map">
+        </iframe>
+      </div>
+
+      <a href="https://www.google.com/maps/dir/?api=1&destination=-33.991590,18.833098" target="_blank" rel="noopener noreferrer" class="button location-directions">
+        Get directions
+      </a>
+    </section>
 
   </main>
 
