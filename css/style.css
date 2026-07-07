@@ -170,7 +170,13 @@ a {
 .hero-overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(180deg, rgba(20,33,61,0.3), rgba(20,33,61,0.65));
+  background: linear-gradient(
+    120deg,
+    rgba(10,15,25,0.75) 0%,
+    rgba(10,15,25,0.55) 35%,
+    rgba(20,33,61,0.35) 60%,
+    rgba(20,33,61,0.55) 100%
+  );
   z-index: 0;
 }
 
@@ -180,20 +186,29 @@ a {
   max-width: 640px;
   margin: 0 var(--space-16);
   color: #fff;
+  padding: var(--space-8);
+  border-radius: 8px;
+  background: rgba(10, 15, 25, 0.25);
+  backdrop-filter: blur(2px);
 }
 
-.hero-content .eyebrow { color: rgba(255,255,255,0.8); }
+.hero-content .eyebrow {
+  color: rgba(255,255,255,0.85);
+  text-shadow: 0 1px 6px rgba(0,0,0,0.4);
+}
 
 .hero-content h1 {
   font-size: clamp(2.2rem, 5vw, 4rem);
   margin-bottom: var(--space-6);
   color: #fff;
+  text-shadow: 0 2px 12px rgba(0,0,0,0.45);
 }
 
 .hero-sub {
-  color: rgba(255,255,255,0.85);
+  color: rgba(255,255,255,0.92);
   margin-bottom: var(--space-8);
   max-width: 50ch;
+  text-shadow: 0 1px 8px rgba(0,0,0,0.35);
 }
 
 .about {
