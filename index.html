@@ -28,6 +28,7 @@
       <button class="nav-close" id="navClose" aria-label="Close menu">&times;</button>
       <a href="#about" class="text-link">About</a>
       <a href="#accomodation" class="text-link">Accomodation</a>
+      <a href="#nearbyList" class="text-link nearby-nav-link">Nearby</a>
       <a href="#availability" class="text-link">Availability</a>
       <a href="#location" class="text-link">Location</a>
       <a href="#contact" class="text-link">Contact</a>
@@ -77,6 +78,7 @@
             <li>Air conditioning &amp; fireplace</li>
             <li>Fully equipped kitchenette</li>
             <li>Wood-fired hot tub</li>
+            <li>Select mini-bar, replenished daily</li>
             <li>Daily cleaning service</li>
           </ul>
           <a href="#availability" class="button">Check availability</a>
@@ -98,6 +100,52 @@
         <img src="./assets/images/gallery-5.jpg" alt="De Bosch Villas gallery image 5" loading="lazy" decoding="async">
         <img src="./assets/images/gallery-6.jpg" alt="De Bosch Villas gallery image 6" loading="lazy" decoding="async">
       </div>
+
+        <div class="gallery-toggle-bar" id="nearbyToggleBar" role="button" tabindex="0" aria-expanded="false" aria-controls="nearbyList">
+    <span>Nearby</span>
+    <svg class="gallery-arrow" id="nearbyArrow" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.8">
+      <path d="M6 9l6 6 6-6"/>
+    </svg>
+  </div>
+  
+  <div class="nearby-list" id="nearbyList">
+    <div class="nearby-item">
+      <div class="nearby-info">
+        <h4>Rust en Vrede Estate</h4>
+        <p>Approx. 6 km from De Bosch Villas</p>
+        <a href="https://rustenvrede.com" target="_blank" rel="noopener noreferrer" class="text-link">rustenvrede.com</a>
+      </div>
+      <a href="https://www.google.com/maps/dir/?api=1&origin=-33.991590,18.833098&destination=Rust+en+Vrede+Estate+Annandale+Road+Stellenbosch" target="_blank" rel="noopener noreferrer" class="button button-small">Get directions</a>
+    </div>
+  
+    <div class="nearby-item">
+      <div class="nearby-info">
+        <h4>Ernie Els Wines</h4>
+        <p>Approx. 6 km from De Bosch Villas</p>
+        <a href="https://ernieelswines.com" target="_blank" rel="noopener noreferrer" class="text-link">ernieelswines.com</a>
+      </div>
+      <a href="https://www.google.com/maps/dir/?api=1&origin=-33.991590,18.833098&destination=Ernie+Els+Wines+Annandale+Road+Stellenbosch" target="_blank" rel="noopener noreferrer" class="button button-small">Get directions</a>
+    </div>
+  
+    <div class="nearby-item">
+      <div class="nearby-info">
+        <h4>Jonkershoek Nature Reserve</h4>
+        <p>Approx. 12 km from De Bosch Villas</p>
+        <a href="https://www.capenature.co.za" target="_blank" rel="noopener noreferrer" class="text-link">capenature.co.za</a>
+      </div>
+      <a href="https://www.google.com/maps/dir/?api=1&origin=-33.991590,18.833098&destination=Jonkershoek+Nature+Reserve+Stellenbosch" target="_blank" rel="noopener noreferrer" class="button button-small">Get directions</a>
+    </div>
+  
+    <div class="nearby-item">
+      <div class="nearby-info">
+        <h4>SCHOON Stellenbosch Square</h4>
+        <p>Approx. 3 km from De Bosch Villas</p>
+        <a href="https://schoon.co.za" target="_blank" rel="noopener noreferrer" class="text-link">schoon.co.za</a>
+      </div>
+      <a href="https://www.google.com/maps/dir/?api=1&origin=-33.991590,18.833098&destination=Stellenbosch+Square+Jamestown+Stellenbosch" target="_blank" rel="noopener noreferrer" class="button button-small">Get directions</a>
+    </div>
+  </div>
+        
     </section>
 
     <section id="availability" class="availability">
@@ -139,30 +187,51 @@
       </div>
 
       <p class="form-note">A minimum stay of 2 nights applies to all bookings.</p>
+
+      <div class="gallery-toggle-bar" id="policiesToggleBar" role="button" tabindex="0" aria-expanded="false" aria-controls="policiesList">
+        <span>Policies</span>
+        <svg class="gallery-arrow" id="policiesArrow" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.8">
+          <path d="M6 9l6 6 6-6"/>
+        </svg>
+      </div>
+      
+      <ul class="policies-list" id="policiesList">
+        <li>Check in: 15:00</li>
+        <li>Check out: 11:00</li>
+        <li>No pets permitted</li>
+        <li>No smoking</li>
+        <li>Children of all ages welcome</li>
+      </ul>
+            
     </section>
 
-    <section id="location" class="location">
-      <p class="eyebrow">Location</p>
-      <h2>In the heart of the Winelands</h2>
-      <p class="section-intro">Set among the mountains and vineyards of Stellenbosch, minutes from the region's finest wine farms and restaurants.</p>
-
-      <div class="location-map">
-        <iframe
-          src="https://www.google.com/maps?q=-33.991590,18.833098&z=16&output=embed"
-          width="100%"
-          height="420"
-          style="border:0;"
-          allowfullscreen=""
-          loading="lazy"
-          referrerpolicy="no-referrer-when-downgrade"
-          title="De Bosch Villas location map">
-        </iframe>
-      </div>
-
+      <section id="location" class="location">
+    <p class="eyebrow">Location</p>
+    <h2>In the heart of the Winelands</h2>
+    <p class="section-intro">Set among the mountains and vineyards of Stellenbosch, minutes from the region's finest wine farms and restaurants.</p>
+  
+    <div class="location-map">
+      <iframe
+        src="https://www.google.com/maps?q=-33.991590,18.833098&z=16&output=embed"
+        width="100%"
+        height="420"
+        style="border:0;"
+        allowfullscreen=""
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+        title="De Bosch Villas location map">
+      </iframe>
+    </div>
+  
+    <div class="location-buttons">
       <a href="https://www.google.com/maps/dir/?api=1&destination=-33.991590,18.833098" target="_blank" rel="noopener noreferrer" class="button location-directions">
         Get directions
       </a>
-    </section>
+      <a href="https://www.google.com/maps/dir/?api=1&origin=Cape+Town+International+Airport&destination=-33.991590,18.833098" target="_blank" rel="noopener noreferrer" class="button button-outline location-directions">
+        Directions from Cape Town Airport
+      </a>
+    </div>
+  </section>
 
   </main>
 
@@ -203,6 +272,26 @@
 
       <p class="footer-copyright">&copy; 2026 De Bosch Villas. All rights reserved.</p>
     </div>
+
+      <div class="footer-legal">
+    <nav class="footer-legal-nav">
+      <a href="#" class="footer-legal-link" data-legal-target="legal-panel">Legal</a>
+      <a href="#" class="footer-legal-link" data-legal-target="privacy-panel">Privacy Policy</a>
+    </nav>
+  </div>
+  
+  <div class="legal-panel" id="legal-panel">
+    <button class="legal-close" data-legal-close>&times;</button>
+    <h3>Legal</h3>
+    <p>Hierdie moet nog gedoen word. -FAD</p>
+  </div>
+  
+  <div class="legal-panel" id="privacy-panel">
+    <button class="legal-close" data-legal-close>&times;</button>
+    <h3>Privacy Policy</h3>
+    <p>Hierdie moet nog gedoen word. -FAD</p>
+  </div>
+    
   </footer>
 
   <script src="./js/main.js"></script>
