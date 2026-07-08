@@ -1,5 +1,8 @@
 document.addEventListener("DOMContentLoaded", () => {
-  const navLinks = document.querySelectorAll('a[href^="#"]');
+
+  // Smooth scroll for all in-page anchor links EXCEPT the special "Nearby" link,
+  // which has its own dedicated handler further down.
+  const navLinks = document.querySelectorAll('a[href^="#"]:not(.nav-nearby-link)');
 
   navLinks.forEach(link => {
     link.addEventListener("click", (e) => {
@@ -15,13 +18,15 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const header = document.querySelector(".site-header");
 
-  window.addEventListener("scroll", () => {
-    if (window.scrollY > 40) {
-      header.style.boxShadow = "0 4px 16px rgba(28,28,27,0.06)";
-    } else {
-      header.style.boxShadow = "none";
-    }
-  });
+  if (header) {
+    window.addEventListener("scroll", () => {
+      if (window.scrollY > 40) {
+        header.style.boxShadow = "0 4px 16px rgba(28,28,27,0.06)";
+      } else {
+        header.style.boxShadow = "none";
+      }
+    });
+  }
 
   const checkinInput = document.getElementById("checkin");
   const checkoutInput = document.getElementById("checkout");
@@ -45,7 +50,7 @@ document.addEventListener("DOMContentLoaded", () => {
     formErrorClose.addEventListener("click", hideFormError);
   }
 
-  if (availabilityForm) {
+  if (availabilityForm && checkinInput && checkoutInput) {
     availabilityForm.addEventListener("submit", (e) => {
       e.preventDefault();
       hideFormError();
@@ -87,17 +92,22 @@ document.addEventListener("DOMContentLoaded", () => {
     checkoutInput.addEventListener("change", hideFormError);
   }
 
+  // Generic toggle-bar setup used for Gallery, Nearby Restaurants, and Policies.
   function setupToggleBar(barId, panelId, arrowId) {
     const bar = document.getElementById(barId);
     const panel = document.getElementById(panelId);
     const arrow = arrowId ? document.getElementById(arrowId) : null;
 
-    if (!bar || !panel) return null;
+    if (!bar || !panel) {
+      console.warn(`Toggle bar setup failed: missing #${barId} or #${panelId} in the DOM.`);
+      return null;
+    }
 
-    function toggle() {
+    function toggle(e) {
+      if (e) e.preventDefault();
       const isOpen = panel.classList.toggle("open");
       if (arrow) arrow.classList.toggle("open", isOpen);
-      bar.setAttribute("aria-expanded", isOpen);
+      bar.setAttribute("aria-expanded", String(isOpen));
       return isOpen;
     }
 
@@ -124,13 +134,18 @@ document.addEventListener("DOMContentLoaded", () => {
   const nearbyControls = setupToggleBar("nearbyToggleBar", "nearbyList", "nearbyArrow");
   setupToggleBar("policiesToggleBar", "policiesList", "policiesArrow");
 
+  // "Nearby" nav link: scroll to the toggle bar and force the panel open.
   document.querySelectorAll(".nav-nearby-link").forEach(link => {
     link.addEventListener("click", (e) => {
       e.preventDefault();
-      const target = document.getElementById("nearbyToggleBar");
-      if (target) {
-        target.scrollIntoView({ behavior: "smooth", block: "start" });
+      const targetBar = document.getElementById("nearbyToggleBar");
+
+      if (targetBar) {
+        targetBar.scrollIntoView({ behavior: "smooth", block: "start" });
+      } else {
+        console.warn("Nearby link click: #nearbyToggleBar not found in the DOM.");
       }
+
       if (nearbyControls) {
         nearbyControls.open();
       }
@@ -167,7 +182,7 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   if (mainNav) {
-    mainNav.querySelectorAll("a").forEach(link => {
+    mainNav.querySelectorAll("a:not(.nav-nearby-link)").forEach(link => {
       link.addEventListener("click", closeNav);
     });
   }
