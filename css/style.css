@@ -378,67 +378,65 @@ a {
   background-color: var(--color-placeholder);
 }
 
-/* NEARBY LIST */
+/* NEARBY RESTAURANTS */
 .nearby-list {
-  display: flex;
-  flex-direction: column;
-  gap: var(--space-4);
-  max-height: 0;
-  overflow: hidden;
-  opacity: 0;
-  transition: max-height 0.5s ease, opacity 0.3s ease, margin-top 0.4s ease;
+  display: none;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-6);
   margin-top: 0;
 }
 
 .nearby-list.open {
-  max-height: 1200px;
-  opacity: 1;
+  display: grid;
   margin-top: var(--space-8);
 }
 
 .nearby-item {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: var(--space-6);
+  flex-direction: column;
+  gap: var(--space-2);
   padding: var(--space-6);
-  background: var(--color-surface);
+  background: var(--color-surface-offset);
   border: 1px solid var(--color-border);
   border-radius: 6px;
 }
 
-.nearby-item-info h4 {
+.nearby-item h4 {
   font-size: 1.1rem;
-  margin-bottom: var(--space-2);
 }
 
 .nearby-distance {
   color: var(--color-text-muted);
   font-size: 0.9rem;
-  margin-bottom: var(--space-2);
 }
 
-/* POLICIES LIST */
+.nearby-item .nearby-directions {
+  margin-top: var(--space-3);
+  align-self: flex-start;
+}
+
+/* POLICIES - ROW STYLE (like unit-features) */
 .policies-list {
-  list-style: disc;
+  display: none;
+  list-style: none;
   margin-top: 0;
-  margin-left: var(--space-6);
-  max-height: 0;
-  overflow: hidden;
-  opacity: 0;
-  transition: max-height 0.4s ease, opacity 0.3s ease, margin-top 0.4s ease;
+  margin-left: 0;
 }
 
 .policies-list.open {
-  max-height: 600px;
-  opacity: 1;
+  display: block;
   margin-top: var(--space-8);
 }
 
 .policies-list li {
   padding: var(--space-2) 0;
-  color: var(--color-text);
+  border-bottom: 1px solid var(--color-border);
+  color: var(--color-text-muted);
   font-size: 0.95rem;
+}
+
+.policies-list li:last-child {
+  border-bottom: none;
 }
 
 /* AVAILABILITY */
@@ -645,31 +643,35 @@ a {
   margin-bottom: var(--space-4);
 }
 
-/* LEGAL LINKS ROW */
-.legal-links {
+/* FOOTER LINKS ROW */
+.footer-links-row {
   display: flex;
-  flex-direction: row;
+  flex-wrap: wrap;
   justify-content: center;
-  gap: var(--space-8);
+  gap: var(--space-6);
   list-style: none;
   margin-top: var(--space-2);
 }
 
-.legal-content {
-  display: none;
+/* LEGAL / PRIVACY STANDALONE PAGES */
+.legal-page {
   max-width: 60ch;
-  margin: var(--space-4) auto 0;
-  padding: var(--space-4);
-  background: var(--color-surface);
-  border: 1px solid var(--color-border);
-  border-radius: 6px;
-  color: var(--color-text-muted);
-  font-size: 0.85rem;
-  text-align: left;
+  margin: 0 auto;
+  padding: var(--space-16) var(--space-6);
 }
 
-.legal-content.open {
-  display: block;
+.legal-back {
+  display: inline-block;
+  margin-bottom: var(--space-8);
+}
+
+.legal-page h1 {
+  font-size: 2rem;
+  margin-bottom: var(--space-6);
+}
+
+.legal-page p {
+  color: var(--color-text-muted);
 }
 
 /* RESPONSIVE - MOBILE */
@@ -864,10 +866,8 @@ a {
     height: 160px;
   }
 
-  .nearby-item {
-    flex-direction: column;
-    align-items: stretch;
-    text-align: left;
+  .nearby-list {
+    grid-template-columns: 1fr;
   }
 
   .nearby-item .button {
@@ -893,17 +893,10 @@ a {
     height: 44px;
   }
 
-  .legal-links {
-    flex-direction: row;
-    flex-wrap: wrap;
-    column-count: 2;
-    justify-content: center;
-    row-gap: var(--space-2);
-  }
-
-  .legal-links {
+  .footer-links-row {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: var(--space-3);
+    gap: var(--space-4);
+    text-align: center;
   }
 }
