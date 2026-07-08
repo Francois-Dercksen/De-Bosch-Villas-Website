@@ -87,8 +87,7 @@ document.addEventListener("DOMContentLoaded", () => {
     checkoutInput.addEventListener("change", hideFormError);
   }
 
-  // Generic toggle-bar helper (used by gallery, nearby, policies)
-  function setupToggleBar(barId, panelId, arrowId, panelOpenClass = "open") {
+  function setupToggleBar(barId, panelId, arrowId) {
     const bar = document.getElementById(barId);
     const panel = document.getElementById(panelId);
     const arrow = arrowId ? document.getElementById(arrowId) : null;
@@ -96,15 +95,15 @@ document.addEventListener("DOMContentLoaded", () => {
     if (!bar || !panel) return null;
 
     function toggle() {
-      const isOpen = panel.classList.toggle(panelOpenClass);
+      const isOpen = panel.classList.toggle("open");
       if (arrow) arrow.classList.toggle("open", isOpen);
       bar.setAttribute("aria-expanded", isOpen);
       return isOpen;
     }
 
     function open() {
-      if (!panel.classList.contains(panelOpenClass)) {
-        panel.classList.add(panelOpenClass);
+      if (!panel.classList.contains("open")) {
+        panel.classList.add("open");
         if (arrow) arrow.classList.add("open");
         bar.setAttribute("aria-expanded", "true");
       }
@@ -125,7 +124,6 @@ document.addEventListener("DOMContentLoaded", () => {
   const nearbyControls = setupToggleBar("nearbyToggleBar", "nearbyList", "nearbyArrow");
   setupToggleBar("policiesToggleBar", "policiesList", "policiesArrow");
 
-  // "Nearby" nav link: scroll to section and open the panel
   document.querySelectorAll(".nav-nearby-link").forEach(link => {
     link.addEventListener("click", (e) => {
       e.preventDefault();
@@ -173,24 +171,4 @@ document.addEventListener("DOMContentLoaded", () => {
       link.addEventListener("click", closeNav);
     });
   }
-
-  // Legal / Privacy Policy toggle links in footer
-  document.querySelectorAll(".legal-toggle").forEach(link => {
-    link.addEventListener("click", (e) => {
-      e.preventDefault();
-      const targetId = link.getAttribute("data-target");
-      const targetEl = document.getElementById(targetId);
-      if (!targetEl) return;
-
-      document.querySelectorAll(".legal-content").forEach(el => {
-        if (el !== targetEl) el.classList.remove("open");
-      });
-
-      targetEl.classList.toggle("open");
-
-      if (targetEl.classList.contains("open")) {
-        targetEl.scrollIntoView({ behavior: "smooth", block: "nearest" });
-      }
-    });
-  });
 });
