@@ -403,6 +403,7 @@ a {
 
 .nearby-item h4 {
   font-size: 1.1rem;
+  margin-bottom: 0;
 }
 
 .nearby-type {
@@ -410,6 +411,7 @@ a {
   font-size: 0.85rem;
   text-transform: uppercase;
   letter-spacing: 0.06em;
+  margin-bottom: var(--space-2);
 }
 
 .nearby-distance {
@@ -436,12 +438,16 @@ a {
   text-align: center;
 }
 
-/* POLICIES - ROW STYLE (like unit-features) */
+/* POLICIES - ROW STYLE (like unit-features), wrapped in a solid panel */
 .policies-list {
   display: none;
   list-style: none;
   margin-top: 0;
   margin-left: 0;
+  background: var(--color-bg);
+  border: 1px solid var(--color-border);
+  border-radius: 6px;
+  padding: var(--space-6) var(--space-8);
 }
 
 .policies-list.open {
@@ -894,6 +900,10 @@ a {
   .nearby-actions {
     flex-direction: column;
     align-items: stretch;
+  }
+
+  .policies-list {
+    padding: var(--space-4) var(--space-5);
   }
 
   .location-directions-group {
