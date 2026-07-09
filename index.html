@@ -8,7 +8,7 @@
   <link rel="preconnect" href="https://api.fontshare.com">
   <link href="https://api.fontshare.com/v2/css?f[]=cabinet-grotesk@400,500,700&f[]=general-sans@400,500,600&display=swap" rel="stylesheet">
 
-  <link rel="stylesheet" href="./css/style.css?v=4" />
+  <link rel="stylesheet" href="./css/style.css?v=5" />
 </head>
 <body>
 
@@ -72,15 +72,23 @@
         <img class="unit-showcase-image" src="./assets/images/villa-1.jpg" alt="Interior of a De Bosch Villas unit" loading="lazy" decoding="async" width="900" height="700">
         <div class="unit-showcase-details">
           <h3>Every villa, the same luxurious standard</h3>
-          <ul class="unit-features">
+          <ul class="unit-features" id="unitFeatures">
             <li>1 Bedroom - 2 guests</li>
             <li>Private terrace</li>
-            <li>Air conditioning &amp; fireplace</li>
-            <li>Fully equipped kitchenette</li>
-            <li>Wood-fired hot tub</li>
-            <li>Select mini-bar, replenished daily</li>
             <li>Daily cleaning service</li>
+            <li class="unit-feature-extra">Air conditioning &amp; fireplace</li>
+            <li class="unit-feature-extra">Fully equipped kitchenette</li>
+            <li class="unit-feature-extra">Wood-fired hot tub</li>
+            <li class="unit-feature-extra">Select mini-bar, replenished daily</li>
           </ul>
+
+          <button type="button" class="show-more-toggle" id="showMoreToggle" aria-expanded="false" aria-controls="unitFeatures">
+            <span class="show-more-label">Show more</span>
+            <svg class="show-more-arrow" id="showMoreArrow" viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M6 9l6 6 6-6"/>
+            </svg>
+          </button>
+
           <a href="#availability" class="button">Check availability</a>
         </div>
       </div>
@@ -109,50 +117,51 @@
       </div>
 
       <div class="nearby-list" id="nearbyList">
-  <div class="nearby-item">
-    <h4>Rust en Vrede Estate</h4>
-    <p class="nearby-type">Restaurant</p>
-    <p class="nearby-distance">~4.3 km from De Bosch Villas</p>
-    <p class="nearby-time">~8 min drive</p>
-    <div class="nearby-actions">
-      <a href="https://rustenvrede.com" target="_blank" rel="noopener noreferrer" class="button button-small nearby-website">View website</a>
-      <a href="https://www.google.com/maps/dir/?api=1&origin=-33.991590,18.833098&destination=Rust+en+Vrede+Estate+Stellenbosch" target="_blank" rel="noopener noreferrer" class="button button-small nearby-directions">Directions</a>
-    </div>
-  </div>
+        <div class="nearby-item">
+          <h4>Rust en Vrede Estate</h4>
+          <p class="nearby-type">Restaurant</p>
+          <p class="nearby-distance">~4.3 km from De Bosch Villas</p>
+          <p class="nearby-time">~8 min drive</p>
+          <div class="nearby-actions">
+            <a href="https://rustenvrede.com" target="_blank" rel="noopener noreferrer" class="button button-small nearby-website">View website</a>
+            <a href="https://www.google.com/maps/dir/?api=1&origin=-33.991590,18.833098&destination=Rust+en+Vrede+Estate+Stellenbosch" target="_blank" rel="noopener noreferrer" class="button button-small nearby-directions">Directions</a>
+          </div>
+        </div>
 
-  <div class="nearby-item">
-    <h4>Ernie Els Wines</h4>
-    <p class="nearby-type">Restaurant</p>
-    <p class="nearby-distance">~5.3 km from De Bosch Villas</p>
-    <p class="nearby-time">~10 min drive</p>
-    <div class="nearby-actions">
-      <a href="https://ernieelswines.com" target="_blank" rel="noopener noreferrer" class="button button-small nearby-website">View website</a>
-      <a href="https://www.google.com/maps/dir/?api=1&origin=-33.991590,18.833098&destination=Ernie+Els+Wines+Stellenbosch" target="_blank" rel="noopener noreferrer" class="button button-small nearby-directions">Directions</a>
-    </div>
-  </div>
+        <div class="nearby-item">
+          <h4>Ernie Els Wines</h4>
+          <p class="nearby-type">Restaurant</p>
+          <p class="nearby-distance">~5.3 km from De Bosch Villas</p>
+          <p class="nearby-time">~10 min drive</p>
+          <div class="nearby-actions">
+            <a href="https://ernieelswines.com" target="_blank" rel="noopener noreferrer" class="button button-small nearby-website">View website</a>
+            <a href="https://www.google.com/maps/dir/?api=1&origin=-33.991590,18.833098&destination=Ernie+Els+Wines+Stellenbosch" target="_blank" rel="noopener noreferrer" class="button button-small nearby-directions">Directions</a>
+          </div>
+        </div>
 
-  <div class="nearby-item">
-    <h4>Stellenbosch Reserve</h4>
-    <p class="nearby-type">Restaurant</p>
-    <p class="nearby-distance">~4.7 km from De Bosch Villas</p>
-    <p class="nearby-time">~8 min drive</p>
-    <div class="nearby-actions">
-      <a href="https://thestellenboschreserve.com" target="_blank" rel="noopener noreferrer" class="button button-small nearby-website">View website</a>
-      <a href="https://www.google.com/maps/dir/?api=1&origin=-33.991590,18.833098&destination=Stellenbosch+Reserve+Annandale+Road+Stellenbosch" target="_blank" rel="noopener noreferrer" class="button button-small nearby-directions">Directions</a>
-    </div>
-  </div>
+        <div class="nearby-item">
+          <h4>Stellenbosch Reserve</h4>
+          <p class="nearby-type">Restaurant</p>
+          <p class="nearby-distance">~4.7 km from De Bosch Villas</p>
+          <p class="nearby-time">~8 min drive</p>
+          <div class="nearby-actions">
+            <a href="https://thestellenboschreserve.com" target="_blank" rel="noopener noreferrer" class="button button-small nearby-website">View website</a>
+            <a href="https://www.google.com/maps/dir/?api=1&origin=-33.991590,18.833098&destination=Stellenbosch+Reserve+Annandale+Road+Stellenbosch" target="_blank" rel="noopener noreferrer" class="button button-small nearby-directions">Directions</a>
+          </div>
+        </div>
 
-  <div class="nearby-item">
-    <h4>Schoon (Stellenbosch Square)</h4>
-    <p class="nearby-type">Restaurant</p>
-    <p class="nearby-distance">~3.8 km from De Bosch Villas</p>
-    <p class="nearby-time">~5 min drive</p>
-    <div class="nearby-actions">
-      <a href="https://schoon.co.za" target="_blank" rel="noopener noreferrer" class="button button-small nearby-website">View website</a>
-      <a href="https://www.google.com/maps/dir/?api=1&origin=-33.991590,18.833098&destination=Schoon+Stellenbosch+Square" target="_blank" rel="noopener noreferrer" class="button button-small nearby-directions">Directions</a>
-    </div>
-  </div>
-</div>
+        <div class="nearby-item">
+          <h4>Schoon (Stellenbosch Square)</h4>
+          <p class="nearby-type">Restaurant</p>
+          <p class="nearby-distance">~3.8 km from De Bosch Villas</p>
+          <p class="nearby-time">~5 min drive</p>
+          <div class="nearby-actions">
+            <a href="https://schoon.co.za" target="_blank" rel="noopener noreferrer" class="button button-small nearby-website">View website</a>
+            <a href="https://www.google.com/maps/dir/?api=1&origin=-33.991590,18.833098&destination=Schoon+Stellenbosch+Square" target="_blank" rel="noopener noreferrer" class="button button-small nearby-directions">Directions</a>
+          </div>
+        </div>
+      </div>
+    </section>
 
     <section id="availability" class="availability">
       <p class="eyebrow">Booking</p>
@@ -192,8 +201,6 @@
         <button type="button" class="form-error-close" aria-label="Dismiss error">&times;</button>
       </div>
 
-      <p class="form-note">A minimum stay of 2 nights applies to all bookings.</p>
-
       <div class="gallery-toggle-bar" id="policiesToggleBar" role="button" tabindex="0" aria-expanded="false" aria-controls="policiesList">
         <span>Policies</span>
         <svg class="gallery-arrow" id="policiesArrow" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.8">
@@ -207,6 +214,7 @@
         <li>No pets permitted</li>
         <li>No smoking</li>
         <li>Children of all ages welcome</li>
+        <li>Minimum stay of 2 nights applies to all bookings</li>
       </ul>
     </section>
 
@@ -243,7 +251,6 @@
   <footer id="contact" class="site-footer">
     <div class="footer-content">
       <p class="footer-logo">De Bosch Villas</p>
-      <p class="footer-tagline">Private villas. Quiet luxury.</p>
 
       <div class="footer-social">
         <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" class="icon-button" aria-label="De Bosch Villas on Facebook">
@@ -275,8 +282,6 @@
         <a href="mailto:bookings@deboschvillas.com" class="text-link">bookings@deboschvillas.com</a>
       </p>
 
-      <p class="footer-copyright">&copy; 2026 De Bosch Villas. All rights reserved.</p>
-
       <ul class="footer-links-row">
         <li><a href="#about" class="text-link">About</a></li>
         <li><a href="#accomodation" class="text-link">Accomodation</a></li>
@@ -285,9 +290,11 @@
         <li><a href="./legal.html" class="text-link">Legal</a></li>
         <li><a href="./privacy.html" class="text-link">Privacy Policy</a></li>
       </ul>
+
+      <p class="footer-copyright">&copy; 2026 De Bosch Villas. All rights reserved.</p>
     </div>
   </footer>
 
-  <script src="./js/main.js?v=4"></script>
+  <script src="./js/main.js?v=5"></script>
 </body>
 </html>
