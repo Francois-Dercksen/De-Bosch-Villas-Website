@@ -1,7 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
 
-  // Smooth scroll for all in-page anchor links EXCEPT the special "Nearby" link,
-  // which has its own dedicated handler further down.
   const navLinks = document.querySelectorAll('a[href^="#"]:not(.nav-nearby-link)');
 
   navLinks.forEach(link => {
@@ -92,7 +90,6 @@ document.addEventListener("DOMContentLoaded", () => {
     checkoutInput.addEventListener("change", hideFormError);
   }
 
-  // Generic toggle-bar setup used for Gallery, Nearby Restaurants, and Policies.
   function setupToggleBar(barId, panelId, arrowId) {
     const bar = document.getElementById(barId);
     const panel = document.getElementById(panelId);
@@ -134,7 +131,6 @@ document.addEventListener("DOMContentLoaded", () => {
   const nearbyControls = setupToggleBar("nearbyToggleBar", "nearbyList", "nearbyArrow");
   setupToggleBar("policiesToggleBar", "policiesList", "policiesArrow");
 
-  // "Nearby" nav link: scroll to the toggle bar and force the panel open.
   document.querySelectorAll(".nav-nearby-link").forEach(link => {
     link.addEventListener("click", (e) => {
       e.preventDefault();
@@ -151,6 +147,21 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     });
   });
+
+  const showMoreToggle = document.getElementById("showMoreToggle");
+  const unitFeatures = document.getElementById("unitFeatures");
+
+  if (showMoreToggle && unitFeatures) {
+    const label = showMoreToggle.querySelector(".show-more-label");
+    const arrow = showMoreToggle.querySelector(".show-more-arrow");
+
+    showMoreToggle.addEventListener("click", () => {
+      const isExpanded = unitFeatures.classList.toggle("expanded");
+      showMoreToggle.setAttribute("aria-expanded", String(isExpanded));
+      label.textContent = isExpanded ? "Show less" : "Show more";
+      arrow.classList.toggle("open", isExpanded);
+    });
+  }
 
   const navToggle = document.getElementById("navToggle");
   const navClose = document.getElementById("navClose");
