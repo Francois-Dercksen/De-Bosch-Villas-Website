@@ -168,15 +168,23 @@
       <h2>Check availability</h2>
       <p class="section-intro">Real-time availability and direct booking, coming soon.</p>
 
-      <div class="booking-widget-wrapper">
-        <div class="booking-widget-placeholder" id="nb_gridwidget">
-          <div class="booking-coming-soon">
-            <p class="booking-coming-soon-title">Online booking opens soon</p>
-            <p class="booking-coming-soon-text">We're putting the finishing touches on instant online booking. In the meantime, please get in touch directly and we'll gladly help you secure your stay.</p>
-            <a href="#contact" class="button">Contact us to book</a>
-          </div>
-        </div>
-      </div>
+      <div class="booking-widget-placeholder" id="nb_gridwidget"></div>
+
+      <script>
+      (function() {
+        var bbid = 16875;
+        var placeholder = "nb_gridwidget";
+        var width = "100%";
+        var height = "480px";
+        var div = document.getElementById(placeholder);
+        var iframe = document.createElement("iframe");
+        iframe.setAttribute("src", "https://www.nightsbridge.co.za/bridge/view?gridwidget=1&bbid=" + bbid);
+        iframe.style.width = width;
+        iframe.style.height = height;
+        iframe.style.border = "none";
+        div.appendChild(iframe);
+      })();
+      </script>
 
       <div class="gallery-toggle-bar" id="policiesToggleBar" role="button" tabindex="0" aria-expanded="false" aria-controls="policiesList">
         <span>Policies</span>
