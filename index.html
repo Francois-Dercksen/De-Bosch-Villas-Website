@@ -168,38 +168,9 @@
       <h2>Check availability</h2>
       <p class="section-intro">Real-time availability and direct booking, coming soon.</p>
 
-      <!--
-        ============================================================
-        TEST VIEW ONLY — DO NOT DEPLOY TO PRODUCTION
-        This uses a live, PUBLIC demo BBID (16875) borrowed from
-        NightsBridge's own embed example, purely so you can preview
-        how the widget looks and behaves on your site.
-
-        It shows another property's real availability/booking data.
-        Visitors could technically interact with someone else's
-        booking widget if this goes live — remove before publishing.
-        ============================================================
-      -->
       <div class="booking-widget-wrapper">
         <div class="booking-widget-placeholder" id="nb_gridwidget"></div>
       </div>
-
-      <script>
-      (function() {
-        var bbid = 16875;
-        var placeholder = "nb_gridwidget";
-        var width = "100%";
-        var height = "480px";
-        var div = document.getElementById(placeholder);
-        var iframe = document.createElement("iframe");
-        iframe.setAttribute("src", "https://www.nightsbridge.co.za/bridge/view?gridwidget=1&bbid=" + bbid);
-        iframe.style.width = width;
-        iframe.style.height = height;
-        iframe.style.border = "none";
-        div.appendChild(iframe);
-      })();
-      </script>
-      <!-- END TEST VIEW BLOCK -->
 
       <div class="gallery-toggle-bar" id="policiesToggleBar" role="button" tabindex="0" aria-expanded="false" aria-controls="policiesList">
         <span>Policies</span>
@@ -296,5 +267,20 @@
   </footer>
 
   <script src="./js/main.js?v=6"></script>
+  <script>
+    (function () {
+      var bbid = 16875;
+      var placeholder = "nb_gridwidget";
+      var width = "100%";
+      var height = "480px";
+      var div = document.getElementById(placeholder);
+      var iframe = document.createElement("iframe");
+      iframe.setAttribute("src", "https://www.nightsbridge.co.za/bridge/view?gridwidget=2&bbid=" + bbid);
+      iframe.style.width = width;
+      iframe.style.height = height;
+      iframe.style.border = "none";
+      div.appendChild(iframe);
+    })();
+  </script>
 </body>
 </html>
