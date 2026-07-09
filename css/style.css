@@ -270,7 +270,7 @@ a {
 
 /* UNITS / ACCOMODATION */
 .units {
-  padding: var(--space-24) var(--space-16);
+  padding: var(--space-24) var(--space-16) var(--space-32);
   border-top: 1px solid var(--color-border);
 }
 
@@ -304,7 +304,7 @@ a {
 
 .unit-features {
   list-style: none;
-  margin-bottom: var(--space-8);
+  margin-bottom: var(--space-4);
 }
 
 .unit-features li {
@@ -316,6 +316,47 @@ a {
 
 .unit-features li:last-child {
   border-bottom: none;
+}
+
+.unit-feature-extra {
+  display: none;
+}
+
+.unit-features.expanded .unit-feature-extra {
+  display: block;
+}
+
+.show-more-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  background: none;
+  border: none;
+  padding: 0;
+  margin-bottom: var(--space-6);
+  color: var(--color-text);
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  font-weight: 500;
+  cursor: pointer;
+  text-decoration: underline;
+  text-decoration-color: color-mix(in oklab, var(--color-text) 40%, transparent);
+}
+
+.show-more-toggle:hover {
+  color: var(--color-accent);
+}
+
+.show-more-arrow {
+  transition: transform 0.25s ease;
+}
+
+.show-more-arrow.open {
+  transform: rotate(180deg);
+}
+
+.show-more-toggle + .button {
+  display: block;
 }
 
 /* TOGGLE BAR (shared: gallery, nearby, policies) */
@@ -522,12 +563,6 @@ a {
   font-family: var(--font-body);
 }
 
-.form-note {
-  margin-top: var(--space-4);
-  font-size: 0.85rem;
-  color: var(--color-text-muted);
-}
-
 /* FORM ERROR PANEL */
 .form-error {
   display: none;
@@ -627,11 +662,6 @@ a {
 .footer-logo {
   font-family: var(--font-display);
   font-size: 1.2rem;
-}
-
-.footer-tagline {
-  color: var(--color-text-muted);
-  font-size: 0.9rem;
   margin-bottom: var(--space-4);
 }
 
@@ -664,12 +694,6 @@ a {
   font-size: 0.95rem;
 }
 
-.footer-copyright {
-  color: var(--color-text-muted);
-  font-size: 0.8rem;
-  margin-bottom: var(--space-4);
-}
-
 /* FOOTER LINKS ROW */
 .footer-links-row {
   display: flex;
@@ -678,6 +702,13 @@ a {
   gap: var(--space-6);
   list-style: none;
   margin-top: var(--space-2);
+}
+
+.footer-copyright {
+  color: var(--color-text-muted);
+  font-size: 0.8rem;
+  margin-top: var(--space-4);
+  margin-bottom: 0;
 }
 
 /* LEGAL / PRIVACY STANDALONE PAGES */
