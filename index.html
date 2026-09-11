@@ -8,7 +8,7 @@
   <link rel="preconnect" href="https://api.fontshare.com">
   <link href="https://api.fontshare.com/v2/css?f[]=cabinet-grotesk@400,500,700&f[]=general-sans@400,500,600&display=swap" rel="stylesheet">
 
-  <link rel="stylesheet" href="./css/style.css?v=6" />
+  <link rel="stylesheet" href="./css/style.css?v=7" />
 </head>
 <body>
 
@@ -27,7 +27,7 @@
     <nav id="mainNav">
       <button class="nav-close" id="navClose" aria-label="Close menu">&times;</button>
       <a href="#about" class="text-link">About</a>
-      <a href="#accomodation" class="text-link">Accomodation</a>
+      <a href="#accommodation" class="text-link">Accomodation</a>
       <a href="#nearby" class="text-link nav-nearby-link">Nearby</a>
       <a href="#availability" class="text-link">Availability</a>
       <a href="#location" class="text-link">Location</a>
@@ -57,29 +57,37 @@
       <div class="about-text">
         <p class="eyebrow">About</p>
         <h2>Thoughtful design, natural beauty</h2>
-        <p>De Bosch Villas offer an exclusive escape for guests seeking nature within effortless comfort. Every detail of the four individual villas has been shaped around a sense of calm, creating an uninterrupted space to rest and recharge.</p>
-        <p>Step outside to sweeping views of the Stellenbosch mountains, vibrant vineyards, and grazing horses – all part of the Winelands' rhythm.</p>
+        <p>Positioned on the front step of fenced pastures, overlooking Stellenbosch's most prestigious vineyards, De Bosch Villas offer an exclusive escape for leisure and rest. With a family-owned, active Saddlebred Equestrian facility as most beautiful backdrop for your retreat, effortless comfort, thoughtful design and quality nature surroundings await your indulgence.</p>
+        <p>Setting a new standard for luxury villas in the Winelands - we welcome you to our piece of paradise.</p>
       </div>
       <img class="about-image" src="./assets/images/about.jpg" alt="Terrace view" loading="lazy" decoding="async" width="900" height="700">
     </section>
 
     <section id="accommodation" class="units">
-      <p class="eyebrow">Accomodation</p>
+      <p class="eyebrow">Accommodation</p>
       <h2>The 4 Villas</h2>
-      <p class="section-intro">Private villas, each offering luxury and comfort.</p>
+      <p class="section-intro">Four exclusive private villas, offering luxurious comfort and breathtaking views of the Stellenbosch mountains and vineyards of world class wineries.</p>
 
       <div class="unit-showcase">
         <img class="unit-showcase-image" src="./assets/images/villa-1.jpg" alt="Interior of a De Bosch Villas unit" loading="lazy" decoding="async" width="900" height="700">
         <div class="unit-showcase-details">
-          <h3>Every villa, the same luxurious standard</h3>
+          <h3>Overview</h3>
+          <p class="unit-overview-text">Each identical villa accommodates two guests and has its own private patio and hot tub.</p>
+          <p class="unit-overview-size">Approx. 100 m&sup2; | 50 ft&sup2; each</p>
+          <p class="unit-includes-label">Includes:</p>
+
           <ul class="unit-features" id="unitFeatures">
             <li>1 Bedroom - 2 guests</li>
+            <li>Wi-Fi</li>
             <li>Private terrace</li>
-            <li>Daily cleaning service</li>
-            <li class="unit-feature-extra">Air conditioning &amp; fireplace</li>
+            <li class="unit-feature-extra">Daily cleaning service</li>
+            <li class="unit-feature-extra">Airconditioning</li>
+            <li class="unit-feature-extra">Fireplace</li>
             <li class="unit-feature-extra">Equipped kitchenette</li>
             <li class="unit-feature-extra">Hot tub</li>
-            <li class="unit-feature-extra">Select mini-bar, replenished daily</li>
+            <li class="unit-feature-extra">Mini bar</li>
+            <li class="unit-feature-extra">Hairdryer</li>
+            <li class="unit-feature-extra">International adapters &amp; USB-C charging outlet</li>
           </ul>
 
           <button type="button" class="show-more-toggle" id="showMoreToggle" aria-expanded="false" aria-controls="unitFeatures">
@@ -120,8 +128,8 @@
         <div class="nearby-item">
           <h4>Rust en Vrede Estate</h4>
           <p class="nearby-type">Restaurant</p>
-          <p class="nearby-distance">~4.3 km from De Bosch Villas</p>
-          <p class="nearby-time">~8 min drive</p>
+          <p class="nearby-distance">4.3 km from De Bosch Villas</p>
+          <p class="nearby-time">8 min drive</p>
           <div class="nearby-actions">
             <a href="https://rustenvrede.com" target="_blank" rel="noopener noreferrer" class="button button-small nearby-website">View website</a>
             <a href="https://www.google.com/maps/dir/?api=1&origin=-33.991590,18.833098&destination=Rust+en+Vrede+Estate+Stellenbosch" target="_blank" rel="noopener noreferrer" class="button button-small nearby-directions">Directions</a>
@@ -131,8 +139,8 @@
         <div class="nearby-item">
           <h4>Ernie Els Wines</h4>
           <p class="nearby-type">Restaurant</p>
-          <p class="nearby-distance">~5.3 km from De Bosch Villas</p>
-          <p class="nearby-time">~10 min drive</p>
+          <p class="nearby-distance">5.3 km from De Bosch Villas</p>
+          <p class="nearby-time">10 min drive</p>
           <div class="nearby-actions">
             <a href="https://ernieelswines.com" target="_blank" rel="noopener noreferrer" class="button button-small nearby-website">View website</a>
             <a href="https://www.google.com/maps/dir/?api=1&origin=-33.991590,18.833098&destination=Ernie+Els+Wines+Stellenbosch" target="_blank" rel="noopener noreferrer" class="button button-small nearby-directions">Directions</a>
@@ -142,8 +150,8 @@
         <div class="nearby-item">
           <h4>Stellenbosch Reserve</h4>
           <p class="nearby-type">Restaurant</p>
-          <p class="nearby-distance">~4.7 km from De Bosch Villas</p>
-          <p class="nearby-time">~8 min drive</p>
+          <p class="nearby-distance">4.7 km from De Bosch Villas</p>
+          <p class="nearby-time">8 min drive</p>
           <div class="nearby-actions">
             <a href="https://thestellenboschreserve.com" target="_blank" rel="noopener noreferrer" class="button button-small nearby-website">View website</a>
             <a href="https://www.google.com/maps/dir/?api=1&origin=-33.991590,18.833098&destination=Stellenbosch+Reserve+Annandale+Road+Stellenbosch" target="_blank" rel="noopener noreferrer" class="button button-small nearby-directions">Directions</a>
@@ -153,8 +161,8 @@
         <div class="nearby-item">
           <h4>Schoon (Stellenbosch Square)</h4>
           <p class="nearby-type">Restaurant</p>
-          <p class="nearby-distance">~3.8 km from De Bosch Villas</p>
-          <p class="nearby-time">~5 min drive</p>
+          <p class="nearby-distance">3.8 km from De Bosch Villas</p>
+          <p class="nearby-time">5 min drive</p>
           <div class="nearby-actions">
             <a href="https://schoon.co.za" target="_blank" rel="noopener noreferrer" class="button button-small nearby-website">View website</a>
             <a href="https://www.google.com/maps/dir/?api=1&origin=-33.991590,18.833098&destination=Schoon+Stellenbosch+Square" target="_blank" rel="noopener noreferrer" class="button button-small nearby-directions">Directions</a>
@@ -186,11 +194,11 @@
       </div>
 
       <ul class="policies-list" id="policiesList">
-        <li>Check in: 15:00</li>
-        <li>Check out: 11:00</li>
+        <li>Check in 15:00</li>
+        <li>Check out 11:00</li>
         <li>No pets permitted</li>
-        <li>No smoking</li>
-        <li>Children of all ages welcome</li>
+        <li>No smoking permitted</li>
+        <li>Children pays full price. Infants under 2 years can be accommodated per request.</li>
       </ul>
 
       <!--
@@ -221,7 +229,7 @@
 
     <section id="location" class="location">
       <p class="eyebrow">Location</p>
-      <h2>In the heart of the Winelands</h2>
+      <h2>Stellenbosch valley – the heart of the Winelands</h2>
       <p class="section-intro">Set among the mountains and vineyards of Stellenbosch, minutes from the region's finest wine farms and restaurants.</p>
 
       <div class="location-map">
@@ -280,12 +288,12 @@
       </div>
 
       <p class="footer-email">
-        <a href="mailto:bookings@deboschvillas.com" class="text-link">xxxxxxxxxxxxxxxxxxx@deboschvillas.com</a>
+        <a href="mailto:bookings@deboschvillas.com" class="text-link">bookings@deboschvillas.com</a>
       </p>
 
       <ul class="footer-links-row">
         <li><a href="#about" class="text-link">About</a></li>
-        <li><a href="#accomodation" class="text-link">Accomodation</a></li>
+        <li><a href="#accommodation" class="text-link">Accomodation</a></li>
         <li><a href="#availability" class="text-link">Availability</a></li>
         <li><a href="#location" class="text-link">Location</a></li>
         <li><a href="./legal.html" class="text-link">Legal</a></li>
@@ -296,6 +304,6 @@
     </div>
   </footer>
 
-  <script src="./js/main.js?v=6"></script>
+  <script src="./js/main.js?v=7"></script>
 </body>
 </html>
