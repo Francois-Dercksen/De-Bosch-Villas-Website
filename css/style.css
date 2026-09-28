@@ -397,7 +397,6 @@ a {
 .image-gallery {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(2, auto);
   gap: var(--space-4);
   max-height: 0;
   overflow: hidden;
@@ -407,7 +406,7 @@ a {
 }
 
 .image-gallery.open {
-  max-height: 1200px;
+  max-height: 600px;
   opacity: 1;
   margin-top: var(--space-8);
 }
