@@ -662,6 +662,28 @@ a {
   color: var(--color-text-muted);
 }
 
+.legal-page h2 {
+  font-size: 1.3rem;
+  margin-top: var(--space-8);
+  margin-bottom: var(--space-3);
+}
+
+.legal-updated {
+  color: var(--color-text-muted);
+  font-size: 0.85rem;
+  margin-bottom: var(--space-8);
+}
+
+.legal-list {
+  list-style: disc;
+  margin: var(--space-3) 0 var(--space-4) var(--space-6);
+  color: var(--color-text-muted);
+}
+
+.legal-list li {
+  margin-bottom: var(--space-2);
+}
+
 /* RESPONSIVE - MOBILE */
 @media (max-width: 768px) {
   .site-header {
