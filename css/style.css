@@ -146,11 +146,14 @@ a {
 }
 
 .logo {
-  font-family: var(--font-display);
-  font-size: 2rem;
-  font-weight: 700;
-  letter-spacing: 0.03em;
-  font-variant-ligatures: common-ligatures;
+  display: inline-flex;
+  align-items: center;
+}
+
+.logo-image {
+  height: 44px;
+  width: auto;
+  display: block;
 }
 
 .site-header nav {
@@ -231,7 +234,17 @@ a {
   text-shadow: 0 1px 6px rgba(0,0,0,0.4);
 }
 
-.hero-content h1 {
+.hero-brand {
+  font-size: clamp(1.6rem, 3.4vw, 2.4rem);
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: var(--space-3);
+  text-shadow: 0 2px 12px rgba(0,0,0,0.45);
+  letter-spacing: 0.01em;
+}
+
+.hero-content h1.hero-title,
+.hero-title {
   font-size: clamp(2.2rem, 5vw, 4rem);
   margin-bottom: var(--space-6);
   color: #fff;
@@ -308,6 +321,12 @@ a {
   margin-top: var(--space-12);
 }
 
+.unit-showcase-images {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
 .unit-showcase-image {
   width: 100%;
   aspect-ratio: 4 / 3;
@@ -323,7 +342,7 @@ a {
 
 .unit-features {
   list-style: none;
-  margin-bottom: var(--space-4);
+  margin-bottom: var(--space-6);
 }
 
 .unit-features li {
@@ -337,48 +356,7 @@ a {
   border-bottom: none;
 }
 
-.unit-feature-extra {
-  display: none;
-}
-
-.unit-features.expanded .unit-feature-extra {
-  display: block;
-}
-
-.show-more-toggle {
-  display: inline-flex;
-  align-items: center;
-  gap: var(--space-2);
-  background: none;
-  border: none;
-  padding: 0;
-  margin-bottom: var(--space-6);
-  color: var(--color-text);
-  font-family: var(--font-body);
-  font-size: 0.9rem;
-  font-weight: 500;
-  cursor: pointer;
-  text-decoration: underline;
-  text-decoration-color: color-mix(in oklab, var(--color-text) 40%, transparent);
-}
-
-.show-more-toggle:hover {
-  color: var(--color-accent);
-}
-
-.show-more-arrow {
-  transition: transform 0.25s ease;
-}
-
-.show-more-arrow.open {
-  transform: rotate(180deg);
-}
-
-.show-more-toggle + .button {
-  display: block;
-}
-
-/* TOGGLE BAR (shared: gallery, nearby, policies) */
+/* TOGGLE BAR (shared: gallery, policies) */
 .gallery-toggle-bar {
   display: flex;
   justify-content: center;
@@ -436,66 +414,6 @@ a {
   object-fit: cover;
   border-radius: 6px;
   background-color: var(--color-placeholder);
-}
-
-/* NEARBY RESTAURANTS */
-.nearby-list {
-  display: none;
-  grid-template-columns: repeat(2, 1fr);
-  gap: var(--space-6);
-  margin-top: 0;
-}
-
-.nearby-list.open {
-  display: grid;
-  margin-top: var(--space-8);
-}
-
-.nearby-item {
-  display: flex;
-  flex-direction: column;
-  gap: var(--space-2);
-  padding: var(--space-6);
-  background: var(--color-surface-offset);
-  border: 1px solid var(--color-border);
-  border-radius: 6px;
-}
-
-.nearby-item h4 {
-  font-size: 1.1rem;
-  margin-bottom: 0;
-}
-
-.nearby-type {
-  color: var(--color-text-muted);
-  font-size: 0.85rem;
-  text-transform: uppercase;
-  letter-spacing: 0.06em;
-  margin-bottom: var(--space-2);
-}
-
-.nearby-distance {
-  color: var(--color-text-muted);
-  font-size: 0.9rem;
-}
-
-.nearby-time {
-  color: var(--color-text-muted);
-  font-size: 0.85rem;
-  margin-bottom: var(--space-2);
-}
-
-.nearby-actions {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: var(--space-3);
-  margin-top: var(--space-3);
-}
-
-.nearby-actions .button {
-  flex: 1;
-  text-align: center;
 }
 
 /* POLICIES - ROW STYLE (like unit-features), wrapped in a solid panel */
@@ -694,6 +612,11 @@ a {
 }
 
 .footer-email {
+  margin-bottom: var(--space-2);
+  font-size: 0.95rem;
+}
+
+.footer-phone {
   margin-bottom: var(--space-4);
   font-size: 0.95rem;
 }
@@ -752,8 +675,8 @@ a {
     width: 100%;
   }
 
-  .logo {
-    font-size: 1.4rem;
+  .logo-image {
+    height: 34px;
   }
 
   .desktop-book {
@@ -864,7 +787,11 @@ a {
     padding: var(--space-5);
   }
 
-  .hero-content h1 {
+  .hero-brand {
+    font-size: clamp(1.2rem, 6vw, 1.8rem);
+  }
+
+  .hero-title {
     font-size: clamp(1.8rem, 8vw, 2.4rem);
   }
 
@@ -915,15 +842,6 @@ a {
 
   .image-gallery img {
     height: 160px;
-  }
-
-  .nearby-list {
-    grid-template-columns: 1fr;
-  }
-
-  .nearby-actions {
-    flex-direction: column;
-    align-items: stretch;
   }
 
   .policies-list {
