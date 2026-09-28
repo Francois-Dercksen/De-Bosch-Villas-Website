@@ -8,13 +8,15 @@
   <link rel="preconnect" href="https://api.fontshare.com">
   <link href="https://api.fontshare.com/v2/css?f[]=cabinet-grotesk@400,500,700&f[]=general-sans@400,500,600&display=swap" rel="stylesheet">
 
-  <link rel="stylesheet" href="./css/style.css?v=7" />
+  <link rel="stylesheet" href="./css/style.css?v=8" />
 </head>
 <body>
 
   <header class="site-header">
     <div class="header-top">
-      <div class="logo">De Bosch Villas</div>
+      <a href="#hero" class="logo">
+        <img src="./assets/images/logo.png" alt="De Bosch Villas" class="logo-image">
+      </a>
       <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false">
         <span></span>
         <span></span>
@@ -28,7 +30,6 @@
       <button class="nav-close" id="navClose" aria-label="Close menu">&times;</button>
       <a href="#about" class="text-link">About</a>
       <a href="#accommodation" class="text-link">Accomodation</a>
-      <a href="#nearby" class="text-link nav-nearby-link">Nearby</a>
       <a href="#availability" class="text-link">Availability</a>
       <a href="#location" class="text-link">Location</a>
       <a href="#contact" class="text-link">Contact</a>
@@ -47,8 +48,9 @@
       <div class="hero-overlay"></div>
       <div class="hero-content">
         <p class="eyebrow">Private villas &middot; Stellenbosch</p>
-        <h1>Quiet luxury</h1>
-        <p class="hero-sub">Four private villas set apart from the ordinary — space, stillness, and considered design at every turn.</p>
+        <h1 class="hero-brand">De Bosch Villas</h1>
+        <h2 class="hero-title">Quiet luxury</h2>
+        <p class="hero-sub">Four private villas set apart from the ordinary. Space, stillness, and considered design at every turn, including a hot tub at each villa.</p>
         <a href="#availability" class="button">Check availability</a>
       </div>
     </section>
@@ -69,7 +71,10 @@
       <p class="section-intro">Four exclusive private villas, offering luxurious comfort and breathtaking views of the Stellenbosch mountains and vineyards of world class wineries.</p>
 
       <div class="unit-showcase">
-        <img class="unit-showcase-image" src="./assets/images/villa-1.jpg" alt="Interior of a De Bosch Villas unit" loading="lazy" decoding="async" width="900" height="700">
+        <div class="unit-showcase-images">
+          <img class="unit-showcase-image" src="./assets/images/villa-1.jpg" alt="Interior of a De Bosch Villas unit" loading="lazy" decoding="async" width="900" height="700">
+          <img class="unit-showcase-image" src="./assets/images/villa-2.jpg" alt="Second view of a De Bosch Villas unit" loading="lazy" decoding="async" width="900" height="700">
+        </div>
         <div class="unit-showcase-details">
           <h3>Overview</h3>
           <p class="unit-overview-text">Each identical villa accommodates two guests and has its own private patio and hot tub.</p>
@@ -79,21 +84,14 @@
           <ul class="unit-features" id="unitFeatures">
             <li>1 Bedroom - 2 guests</li>
             <li>High speed fibre Wi-Fi</li>
-            <li class="unit-feature-extra">Daily cleaning service</li>
-            <li class="unit-feature-extra">Air conditioning</li>
-            <li class="unit-feature-extra">Wood fireplace</li>
-            <li class="unit-feature-extra">Kitchenette</li>
-            <li class="unit-feature-extra">Hot tub</li>
-            <li class="unit-feature-extra">Mini bar</li>
-            <li class="unit-feature-extra">Safe</li>
+            <li>Daily cleaning service</li>
+            <li>Air conditioning</li>
+            <li>Wood fireplace</li>
+            <li>Kitchenette</li>
+            <li>Hot tub</li>
+            <li>Mini bar</li>
+            <li>Safe</li>
           </ul>
-
-          <button type="button" class="show-more-toggle" id="showMoreToggle" aria-expanded="false" aria-controls="unitFeatures">
-            <span class="show-more-label">Show more</span>
-            <svg class="show-more-arrow" id="showMoreArrow" viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2">
-              <path d="M6 9l6 6 6-6"/>
-            </svg>
-          </button>
 
           <a href="#availability" class="button">Check availability</a>
         </div>
@@ -113,59 +111,6 @@
         <img src="./assets/images/gallery-4.jpg" alt="De Bosch Villas gallery image 4" loading="lazy" decoding="async">
         <img src="./assets/images/gallery-5.jpg" alt="De Bosch Villas gallery image 5" loading="lazy" decoding="async">
         <img src="./assets/images/gallery-6.jpg" alt="De Bosch Villas gallery image 6" loading="lazy" decoding="async">
-      </div>
-
-      <div class="gallery-toggle-bar" id="nearbyToggleBar" role="button" tabindex="0" aria-expanded="false" aria-controls="nearbyList">
-        <span>Nearby Restaurants</span>
-        <svg class="gallery-arrow" id="nearbyArrow" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.8">
-          <path d="M6 9l6 6 6-6"/>
-        </svg>
-      </div>
-
-      <div class="nearby-list" id="nearbyList">
-        <div class="nearby-item">
-          <h4>Rust en Vrede Estate</h4>
-          <p class="nearby-type">Restaurant</p>
-          <p class="nearby-distance">4.3 km from De Bosch Villas</p>
-          <p class="nearby-time">8 min drive</p>
-          <div class="nearby-actions">
-            <a href="https://rustenvrede.com" target="_blank" rel="noopener noreferrer" class="button button-small nearby-website">View website</a>
-            <a href="https://www.google.com/maps/dir/?api=1&origin=-33.991590,18.833098&destination=Rust+en+Vrede+Estate+Stellenbosch" target="_blank" rel="noopener noreferrer" class="button button-small nearby-directions">Directions</a>
-          </div>
-        </div>
-
-        <div class="nearby-item">
-          <h4>Ernie Els Wines</h4>
-          <p class="nearby-type">Restaurant</p>
-          <p class="nearby-distance">5.3 km from De Bosch Villas</p>
-          <p class="nearby-time">10 min drive</p>
-          <div class="nearby-actions">
-            <a href="https://ernieelswines.com" target="_blank" rel="noopener noreferrer" class="button button-small nearby-website">View website</a>
-            <a href="https://www.google.com/maps/dir/?api=1&origin=-33.991590,18.833098&destination=Ernie+Els+Wines+Stellenbosch" target="_blank" rel="noopener noreferrer" class="button button-small nearby-directions">Directions</a>
-          </div>
-        </div>
-
-        <div class="nearby-item">
-          <h4>Stellenbosch Reserve</h4>
-          <p class="nearby-type">Restaurant</p>
-          <p class="nearby-distance">4.7 km from De Bosch Villas</p>
-          <p class="nearby-time">8 min drive</p>
-          <div class="nearby-actions">
-            <a href="https://thestellenboschreserve.com" target="_blank" rel="noopener noreferrer" class="button button-small nearby-website">View website</a>
-            <a href="https://www.google.com/maps/dir/?api=1&origin=-33.991590,18.833098&destination=Stellenbosch+Reserve+Annandale+Road+Stellenbosch" target="_blank" rel="noopener noreferrer" class="button button-small nearby-directions">Directions</a>
-          </div>
-        </div>
-
-        <div class="nearby-item">
-          <h4>Schoon (Stellenbosch Square)</h4>
-          <p class="nearby-type">Restaurant</p>
-          <p class="nearby-distance">3.8 km from De Bosch Villas</p>
-          <p class="nearby-time">5 min drive</p>
-          <div class="nearby-actions">
-            <a href="https://schoon.co.za" target="_blank" rel="noopener noreferrer" class="button button-small nearby-website">View website</a>
-            <a href="https://www.google.com/maps/dir/?api=1&origin=-33.991590,18.833098&destination=Schoon+Stellenbosch+Square" target="_blank" rel="noopener noreferrer" class="button button-small nearby-directions">Directions</a>
-          </div>
-        </div>
       </div>
     </section>
 
@@ -271,13 +216,13 @@
             <circle cx="17.2" cy="6.8" r="1"/>
           </svg>
         </a>
-        <a href="mailto:bookings@deboschvillas.com" class="icon-button" aria-label="Email De Bosch Villas">
+        <a href="mailto:villas@debosch.co.za" class="icon-button" aria-label="Email De Bosch Villas">
           <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8">
             <rect x="3" y="5" width="18" height="14" rx="2"/>
             <path d="M3 7l9 6 9-6"/>
           </svg>
         </a>
-        <a href="tel:+27000000000" class="icon-button" aria-label="Call De Bosch Villas">
+        <a href="tel:+27735282352" class="icon-button" aria-label="Call De Bosch Villas">
           <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8">
             <path d="M6.6 10.8a15.4 15.4 0 0 0 6.6 6.6l2.2-2.2a1.2 1.2 0 0 1 1.2-.3 12.4 12.4 0 0 0 3.9.6 1.2 1.2 0 0 1 1.2 1.2V20a1.2 1.2 0 0 1-1.2 1.2A18.8 18.8 0 0 1 2.8 3.2 1.2 1.2 0 0 1 4 2h3.3a1.2 1.2 0 0 1 1.2 1.2 12.4 12.4 0 0 0 .6 3.9 1.2 1.2 0 0 1-.3 1.2Z"/>
           </svg>
@@ -285,7 +230,11 @@
       </div>
 
       <p class="footer-email">
-        <a href="mailto:bookings@deboschvillas.com" class="text-link">bookings@deboschvillas.com</a>
+        <a href="mailto:villas@debosch.co.za" class="text-link">villas@debosch.co.za</a>
+      </p>
+
+      <p class="footer-phone">
+        <a href="tel:+27735282352" class="text-link">+27 73 528 2352</a>
       </p>
 
       <ul class="footer-links-row">
@@ -301,6 +250,6 @@
     </div>
   </footer>
 
-  <script src="./js/main.js?v=7"></script>
+  <script src="./js/main.js?v=8"></script>
 </body>
 </html>
