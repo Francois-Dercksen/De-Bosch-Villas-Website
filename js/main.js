@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {
 
-  const navLinks = document.querySelectorAll('a[href^="#"]:not(.nav-nearby-link)');
+  const navLinks = document.querySelectorAll('a[href^="#"]');
 
   navLinks.forEach(link => {
     link.addEventListener("click", (e) => {
@@ -64,40 +64,7 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   setupToggleBar("galleryToggleBar", "imageGallery", "galleryArrow");
-  const nearbyControls = setupToggleBar("nearbyToggleBar", "nearbyList", "nearbyArrow");
   setupToggleBar("policiesToggleBar", "policiesList", "policiesArrow");
-
-  document.querySelectorAll(".nav-nearby-link").forEach(link => {
-    link.addEventListener("click", (e) => {
-      e.preventDefault();
-      const targetBar = document.getElementById("nearbyToggleBar");
-
-      if (targetBar) {
-        targetBar.scrollIntoView({ behavior: "smooth", block: "start" });
-      } else {
-        console.warn("Nearby link click: #nearbyToggleBar not found in the DOM.");
-      }
-
-      if (nearbyControls) {
-        nearbyControls.open();
-      }
-    });
-  });
-
-  const showMoreToggle = document.getElementById("showMoreToggle");
-  const unitFeatures = document.getElementById("unitFeatures");
-
-  if (showMoreToggle && unitFeatures) {
-    const label = showMoreToggle.querySelector(".show-more-label");
-    const arrow = showMoreToggle.querySelector(".show-more-arrow");
-
-    showMoreToggle.addEventListener("click", () => {
-      const isExpanded = unitFeatures.classList.toggle("expanded");
-      showMoreToggle.setAttribute("aria-expanded", String(isExpanded));
-      label.textContent = isExpanded ? "Show less" : "Show more";
-      arrow.classList.toggle("open", isExpanded);
-    });
-  }
 
   const navToggle = document.getElementById("navToggle");
   const navClose = document.getElementById("navClose");
@@ -129,7 +96,7 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   if (mainNav) {
-    mainNav.querySelectorAll("a:not(.nav-nearby-link)").forEach(link => {
+    mainNav.querySelectorAll("a").forEach(link => {
       link.addEventListener("click", closeNav);
     });
   }
