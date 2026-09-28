@@ -279,7 +279,7 @@ a {
 
 .about-image {
   width: 100%;
-  aspect-ratio: 4 / 3;
+  aspect-ratio: 16 / 9;
   object-fit: cover;
   border-radius: 6px;
   background-color: var(--color-placeholder);
@@ -333,7 +333,7 @@ a {
 
 .unit-showcase-image {
   width: 100%;
-  aspect-ratio: 4 / 3;
+  aspect-ratio: 16 / 9;
   object-fit: cover;
   border-radius: 6px;
   background-color: var(--color-placeholder);
