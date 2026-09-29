@@ -227,6 +227,7 @@ a {
   height: clamp(6rem, 16vw, 13rem);
   width: auto;
   max-width: 92%;
+  object-fit: contain;
   margin-bottom: 0;
   filter: drop-shadow(0 3px 18px rgba(0,0,0,0.5));
 }
@@ -815,8 +816,9 @@ a {
   }
 
   .hero-brand-logo {
-    height: clamp(9rem, 57vw, 13.5rem);
-    max-width: 96%;
+    width: 96%;
+    max-width: 32rem;
+    height: auto;
     margin-bottom: 0;
   }
 
