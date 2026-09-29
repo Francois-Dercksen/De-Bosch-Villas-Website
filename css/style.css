@@ -827,7 +827,7 @@ a {
   }
 
   .hero-brand-logo {
-    height: clamp(6rem, 38vw, 9rem);
+    height: clamp(9rem, 57vw, 13.5rem);
     max-width: 96%;
     margin-bottom: var(--space-8);
   }
