@@ -192,7 +192,7 @@ a {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: flex-start;
+  align-items: center;
   overflow: hidden;
   padding: 0 var(--space-16);
 }
@@ -223,22 +223,41 @@ a {
 .hero-brand-logo {
   position: relative;
   z-index: 1;
-  height: clamp(3.2rem, 8vw, 6.5rem);
+  height: clamp(6rem, 16vw, 13rem);
   width: auto;
-  max-width: 90%;
-  margin-bottom: var(--space-8);
+  max-width: 92%;
+  margin-bottom: var(--space-16);
   filter: drop-shadow(0 3px 18px rgba(0,0,0,0.5));
 }
 
 .hero-content {
   position: relative;
   z-index: 1;
-  max-width: 640px;
+  width: 100%;
+  max-width: 980px;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: center;
+  gap: var(--space-12);
   color: #fff;
-  padding: var(--space-8);
+  padding: var(--space-6) var(--space-8);
   border-radius: 8px;
   background: rgba(10, 15, 25, 0.25);
   backdrop-filter: blur(2px);
+}
+
+.hero-content-text {
+  min-width: 0;
+}
+
+.hero-content-cta {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.hero-content-cta .button {
+  white-space: nowrap;
 }
 
 .hero-content .eyebrow {
@@ -248,16 +267,16 @@ a {
 
 .hero-content h1.hero-title,
 .hero-title {
-  font-size: clamp(2.2rem, 5vw, 4rem);
-  margin-bottom: var(--space-6);
+  font-size: clamp(2rem, 4vw, 3rem);
+  margin-bottom: var(--space-3);
   color: #fff;
   text-shadow: 0 2px 12px rgba(0,0,0,0.45);
 }
 
 .hero-sub {
   color: rgba(255,255,255,0.92);
-  margin-bottom: var(--space-8);
-  max-width: 50ch;
+  margin-bottom: 0;
+  max-width: 55ch;
   text-shadow: 0 1px 8px rgba(0,0,0,0.35);
 }
 
@@ -808,13 +827,24 @@ a {
   }
 
   .hero-brand-logo {
-    height: clamp(2.2rem, 12vw, 3.2rem);
-    margin-bottom: var(--space-5);
+    height: clamp(3.5rem, 20vw, 5.5rem);
+    margin-bottom: var(--space-8);
   }
 
   .hero-content {
+    grid-template-columns: 1fr;
+    gap: var(--space-5);
     margin: 0;
     padding: var(--space-5);
+  }
+
+  .hero-content-cta {
+    justify-content: stretch;
+  }
+
+  .hero-content-cta .button {
+    width: 100%;
+    text-align: center;
   }
 
   .hero-title {
@@ -823,12 +853,6 @@ a {
 
   .hero-sub {
     font-size: 0.95rem;
-  }
-
-  .hero-content .button {
-    width: 100%;
-    text-align: center;
-    padding: var(--space-4);
   }
 
   .about {
