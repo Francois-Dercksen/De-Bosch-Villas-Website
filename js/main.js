@@ -63,7 +63,6 @@ document.addEventListener("DOMContentLoaded", () => {
     return { toggle, open };
   }
 
-  setupToggleBar("galleryToggleBar", "imageGallery", "galleryArrow");
   setupToggleBar("policiesToggleBar", "policiesList", "policiesArrow");
 
   const navToggle = document.getElementById("navToggle");
