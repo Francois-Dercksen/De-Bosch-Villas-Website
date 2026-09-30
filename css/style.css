@@ -221,6 +221,16 @@ a {
   z-index: 0;
 }
 
+/* TEMPORARY: solid colour instead of hero.jpg (delete this block to restore the photo) */
+.hero {
+  background-color: #76695D;
+}
+
+.hero-image,
+.hero-overlay {
+  display: none;
+}
+
 .hero-brand-logo {
   position: relative;
   z-index: 1;
@@ -461,7 +471,7 @@ a {
   background: var(--color-navy-soft);
 }
 
-/* NIGHTSBRIDGE BOOKING WIDGET (placeholder until BBID is added) */
+/* BOOKING CONTAINER (holds the contact form; NightsBridge widget later) */
 .booking-widget-wrapper {
   margin-top: var(--space-8);
 }
@@ -477,23 +487,67 @@ a {
   justify-content: center;
 }
 
-.booking-coming-soon {
-  max-width: 480px;
-  text-align: center;
+/* CONTACT FORM */
+.contact-form {
+  width: 100%;
+  max-width: 640px;
   padding: var(--space-12) var(--space-8);
+  text-align: left;
 }
 
-.booking-coming-soon-title {
-  font-family: var(--font-display);
-  font-size: 1.3rem;
-  margin-bottom: var(--space-3);
+.form-field {
+  margin-bottom: var(--space-5);
 }
 
-.booking-coming-soon-text {
-  color: var(--color-text-muted);
-  margin-bottom: var(--space-6);
+.form-field label {
+  display: block;
+  margin-bottom: var(--space-2);
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+
+.form-field input,
+.form-field textarea {
+  width: 100%;
+  padding: var(--space-3) var(--space-4);
+  font-family: var(--font-body);
   font-size: 0.95rem;
+  color: var(--color-text);
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: 4px;
+  transition: border-color 0.2s ease;
 }
+
+.form-field textarea {
+  resize: vertical;
+}
+
+.form-field input:focus,
+.form-field textarea:focus {
+  outline: none;
+  border-color: var(--color-accent);
+}
+
+.contact-form .button {
+  border: none;
+  cursor: pointer;
+  font-family: var(--font-body);
+}
+
+.contact-form .button:disabled {
+  opacity: 0.6;
+  cursor: wait;
+}
+
+.contact-form-status {
+  margin-top: var(--space-4);
+  font-size: 0.9rem;
+  color: var(--color-text-muted);
+}
+
+.contact-form-status.success { color: #2f6b3f; }
+.contact-form-status.error { color: #a33a3a; }
 
 /* FORM ERROR PANEL (retained for future use if a custom form returns) */
 .form-error {
@@ -862,8 +916,12 @@ a {
     text-align: center;
   }
 
-  .booking-coming-soon {
+  .contact-form {
     padding: var(--space-8) var(--space-5);
+  }
+
+  .contact-form .button {
+    width: 100%;
   }
 
   .gallery-toggle-bar {
