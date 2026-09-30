@@ -10,7 +10,7 @@
   <link rel="preconnect" href="https://api.fontshare.com">
   <link href="https://api.fontshare.com/v2/css?f[]=cabinet-grotesk@400,500,700&f[]=general-sans@400,500,600&display=swap" rel="stylesheet">
 
-  <link rel="stylesheet" href="./css/style.css?v=17" />
+  <link rel="stylesheet" href="./css/style.css?v=18" />
 </head>
 <body>
 
@@ -32,7 +32,6 @@
       <button class="nav-close" id="navClose" aria-label="Close menu">&times;</button>
       <a href="#about" class="text-link">About</a>
       <a href="#accommodation" class="text-link">Accomodation</a>
-      <a href="#availability" class="text-link">Availability</a>
       <a href="#location" class="text-link">Location</a>
       <a href="#contact" class="text-link">Contact</a>
       <a href="#availability" class="button mobile-book">Book now</a>
@@ -95,7 +94,7 @@
             <li>Kitchenette</li>
             <li>Hot tub</li>
             <li>Mini bar</li>
-            <li>Digital safe</li>
+            <li>Digital Safe</li>
           </ul>
 
           <a href="#availability" class="button">Check availability</a>
@@ -111,7 +110,8 @@
 
     <section id="availability" class="availability">
       <p class="eyebrow">Booking</p>
-      <h2>ENQUIREES</h2>
+      <h2>Enquiries</h2>
+      <p class="section-intro">Real-time availability and direct booking, coming soon.</p>
 
       <div class="booking-widget-wrapper">
         <div class="booking-widget-placeholder" id="nb_gridwidget">
@@ -137,7 +137,7 @@
             </div>
 
             <div class="form-field">
-              <label for="cfMessage">Booking enquiry</label>
+              <label for="cfMessage">Booking details</label>
               <textarea id="cfMessage" name="message" rows="5" placeholder="Dates, number of guests and any questions" required></textarea>
             </div>
 
@@ -147,19 +147,15 @@
         </div>
       </div>
 
-      <div class="gallery-toggle-bar" id="policiesToggleBar" role="button" tabindex="0" aria-expanded="false" aria-controls="policiesList">
-        <span>Policies</span>
-        <svg class="gallery-arrow" id="policiesArrow" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.8">
-          <path d="M6 9l6 6 6-6"/>
-        </svg>
+      <div class="policies-section">
+        <h3 class="policies-heading">Policies</h3>
+        <ul class="policies-list" id="policiesList">
+          <li>Check in 15:00</li>
+          <li>Check out 11:00</li>
+          <li>No pets permitted</li>
+          <li>Smoke free area</li>
+        </ul>
       </div>
-
-      <ul class="policies-list" id="policiesList">
-        <li>Check in 15:00</li>
-        <li>Check out 11:00</li>
-        <li>No pets permitted</li>
-        <li>Smoke free area</li>
-      </ul>
 
       <!--
         NIGHTSBRIDGE WIDGET — PLACEHOLDER, NOT YET ACTIVE
@@ -258,7 +254,6 @@
       <ul class="footer-links-row">
         <li><a href="#about" class="text-link">About</a></li>
         <li><a href="#accommodation" class="text-link">Accomodation</a></li>
-        <li><a href="#availability" class="text-link">Availability</a></li>
         <li><a href="#location" class="text-link">Location</a></li>
         <li><a href="./legal.html" class="text-link">Legal</a></li>
         <li><a href="./privacy.html" class="text-link">Privacy Policy</a></li>
@@ -268,6 +263,6 @@
     </div>
   </footer>
 
-  <script src="./js/main.js?v=17"></script>
+  <script src="./js/main.js?v=18"></script>
 </body>
 </html>
