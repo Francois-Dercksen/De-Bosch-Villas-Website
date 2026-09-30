@@ -297,10 +297,13 @@ a {
   padding: var(--space-24) var(--space-16);
 }
 
-.about-text p:last-child {
+.about-text p:not(.eyebrow) {
   color: var(--color-text-muted);
-  margin-top: var(--space-4);
   max-width: 55ch;
+}
+
+.about-text p:not(.eyebrow) + p {
+  margin-top: var(--space-4);
 }
 
 .about-image {
@@ -402,55 +405,22 @@ a {
   background-color: var(--color-placeholder);
 }
 
-/* TOGGLE BAR (used by Policies) */
-.gallery-toggle-bar {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: var(--space-3);
+/* POLICIES (fixed section) */
+.policies-section {
   margin-top: var(--space-16);
-  padding: var(--space-4);
-  background: var(--color-navy-soft);
-  border: 1px solid var(--color-border);
-  border-radius: 6px;
-  color: var(--color-text);
-  font-size: 0.9rem;
-  font-weight: 500;
-  letter-spacing: 0.04em;
-  text-transform: uppercase;
-  cursor: pointer;
-  transition: background 0.2s ease, border-color 0.2s ease;
 }
 
-.gallery-toggle-bar:hover {
-  background: var(--color-accent);
-  color: #fff;
-  border-color: var(--color-accent);
+.policies-heading {
+  font-size: 1.4rem;
+  margin-bottom: var(--space-4);
 }
 
-.gallery-arrow {
-  transition: transform 0.3s ease;
-}
-
-.gallery-arrow.open {
-  transform: rotate(180deg);
-}
-
-/* POLICIES - ROW STYLE (like unit-features), wrapped in a solid panel */
 .policies-list {
-  display: none;
   list-style: none;
-  margin-top: 0;
-  margin-left: 0;
   background: var(--color-bg);
   border: 1px solid var(--color-border);
   border-radius: 6px;
   padding: var(--space-6) var(--space-8);
-}
-
-.policies-list.open {
-  display: block;
-  margin-top: var(--space-8);
 }
 
 .policies-list li {
@@ -464,7 +434,7 @@ a {
   border-bottom: none;
 }
 
-/* AVAILABILITY */
+/* AVAILABILITY / ENQUIRIES */
 .availability {
   padding: var(--space-24) var(--space-16);
   border-top: 1px solid var(--color-border);
@@ -935,12 +905,6 @@ a {
     width: 100%;
   }
 
-  .gallery-toggle-bar {
-    padding: var(--space-4) var(--space-3);
-    font-size: 0.8rem;
-    text-align: center;
-  }
-
   .image-gallery {
     grid-template-columns: repeat(2, 1fr);
     gap: var(--space-3);
@@ -949,6 +913,10 @@ a {
 
   .image-gallery img {
     height: 160px;
+  }
+
+  .policies-section {
+    margin-top: var(--space-12);
   }
 
   .policies-list {
@@ -978,5 +946,9 @@ a {
     grid-template-columns: 1fr 1fr;
     gap: var(--space-4);
     text-align: center;
+  }
+
+  .footer-links-row li:last-child:nth-child(odd) {
+    grid-column: 1 / -1;
   }
 }
