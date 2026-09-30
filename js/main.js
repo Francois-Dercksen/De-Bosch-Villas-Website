@@ -99,4 +99,41 @@ document.addEventListener("DOMContentLoaded", () => {
       link.addEventListener("click", closeNav);
     });
   }
+
+  const contactForm = document.getElementById("contactForm");
+
+  if (contactForm) {
+    const status = document.getElementById("contactFormStatus");
+    const submitBtn = contactForm.querySelector('button[type="submit"]');
+
+    contactForm.addEventListener("submit", async (e) => {
+      e.preventDefault();
+      status.className = "contact-form-status";
+      status.textContent = "Sending...";
+      submitBtn.disabled = true;
+
+      try {
+        const data = Object.fromEntries(new FormData(contactForm));
+        const res = await fetch(contactForm.action, {
+          method: "POST",
+          headers: { "Content-Type": "application/json", Accept: "application/json" },
+          body: JSON.stringify(data)
+        });
+        const json = await res.json();
+
+        if (res.ok && json.success) {
+          contactForm.reset();
+          status.textContent = "Thank you. Your enquiry has been sent and we will be in touch shortly.";
+          status.classList.add("success");
+        } else {
+          throw new Error(json.message || "Submission failed");
+        }
+      } catch (err) {
+        status.textContent = "Sorry, something went wrong. Please email villas@debosch.co.za or call +27 73 528 2352.";
+        status.classList.add("error");
+      } finally {
+        submitBtn.disabled = false;
+      }
+    });
+  }
 });
