@@ -302,6 +302,10 @@ a {
   max-width: 55ch;
 }
 
+.about-text h2 {
+  margin-bottom: var(--space-4);
+}
+
 .about-text p:not(.eyebrow) + p {
   margin-top: var(--space-4);
 }
