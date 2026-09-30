@@ -234,7 +234,7 @@ a {
 .hero-brand-logo {
   position: relative;
   z-index: 1;
-  height: clamp(6rem, 16vw, 13rem);
+  height: clamp(10.5rem, 28vw, 22.75rem);
   width: auto;
   max-width: 92%;
   object-fit: contain;
