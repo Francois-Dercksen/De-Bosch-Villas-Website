@@ -297,13 +297,13 @@ a {
   padding: var(--space-24) var(--space-16);
 }
 
+.about-text h2 {
+  margin-bottom: var(--space-4);
+}
+
 .about-text p:not(.eyebrow) {
   color: var(--color-text-muted);
   max-width: 55ch;
-}
-
-.about-text h2 {
-  margin-bottom: var(--space-4);
 }
 
 .about-text p:not(.eyebrow) + p {
