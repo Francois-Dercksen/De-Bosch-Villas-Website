@@ -745,6 +745,17 @@ a {
   margin-bottom: var(--space-2);
 }
 
+/* JUSTIFIED CONTENT PARAGRAPHS */
+.hero-content .hero-sub,
+.about-text p:not(.eyebrow),
+.section-intro,
+.unit-overview-text,
+.legal-page p:not(.eyebrow):not(.legal-updated) {
+  text-align: justify;
+  hyphens: auto;
+  -webkit-hyphens: auto;
+}
+
 /* RESPONSIVE - MOBILE */
 @media (max-width: 768px) {
   .site-header {
