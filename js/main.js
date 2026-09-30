@@ -26,45 +26,6 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  function setupToggleBar(barId, panelId, arrowId) {
-    const bar = document.getElementById(barId);
-    const panel = document.getElementById(panelId);
-    const arrow = arrowId ? document.getElementById(arrowId) : null;
-
-    if (!bar || !panel) {
-      console.warn(`Toggle bar setup failed: missing #${barId} or #${panelId} in the DOM.`);
-      return null;
-    }
-
-    function toggle(e) {
-      if (e) e.preventDefault();
-      const isOpen = panel.classList.toggle("open");
-      if (arrow) arrow.classList.toggle("open", isOpen);
-      bar.setAttribute("aria-expanded", String(isOpen));
-      return isOpen;
-    }
-
-    function open() {
-      if (!panel.classList.contains("open")) {
-        panel.classList.add("open");
-        if (arrow) arrow.classList.add("open");
-        bar.setAttribute("aria-expanded", "true");
-      }
-    }
-
-    bar.addEventListener("click", toggle);
-    bar.addEventListener("keydown", (e) => {
-      if (e.key === "Enter" || e.key === " ") {
-        e.preventDefault();
-        toggle();
-      }
-    });
-
-    return { toggle, open };
-  }
-
-  setupToggleBar("policiesToggleBar", "policiesList", "policiesArrow");
-
   const navToggle = document.getElementById("navToggle");
   const navClose = document.getElementById("navClose");
   const mainNav = document.getElementById("mainNav");
